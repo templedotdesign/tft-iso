@@ -1,0 +1,29 @@
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imageBox img {
+  width: 80%;
+  height: 80%;
+}
+
+.imageBox button {
+  margin: 20px;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.imageBox button:hover {
+  background-color: black;
+  color: white;
+}
+
+.imageBox p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}

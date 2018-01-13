@@ -1,0 +1,18 @@
+.tabs {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 50%;
+  margin: 0 auto;
+  height: 70vh;
+  border-color: black;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+}

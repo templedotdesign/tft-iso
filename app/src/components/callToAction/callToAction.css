@@ -1,0 +1,26 @@
+.callToAction {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  margin: 50px auto;
+  font-size: 1.3rem;
+  background-color: white;
+}
+
+.callToAction button {
+  padding: 20px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border-radius: 5px;  
+}
+
+.callToAction button:hover {
+  background-color: black;
+  color: white;
+}
+
+

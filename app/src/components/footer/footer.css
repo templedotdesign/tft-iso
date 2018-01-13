@@ -1,0 +1,38 @@
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer img {
+  width: 200px;
+  height: 200px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.column p {
+  margin: 25px 0;
+}
+
+.column span {
+  font-size: 1.7rem;
+
+}

@@ -1,9 +1,16 @@
 import React from 'react';
 
+import Layout from '../layout/layout';
+import Home from '../home/home';
+
+import logo from '../../assets/tftlogo.jpg';
+
 const app = () => {
   return (
     <div>
-       <h1>App</h1>
+      <Layout logo={logo}>
+        <Home/>
+      </Layout>
     </div>
   );
 };
