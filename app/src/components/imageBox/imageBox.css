@@ -23,6 +23,20 @@
   color: white;
 }
 
+.imageBox a {
+  margin: 20px;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.imageBox a:hover {
+  background-color: black;
+  color: white;
+}
+
 .imageBox p {
   margin-bottom: 20px;
   font-size: 1.2rem;

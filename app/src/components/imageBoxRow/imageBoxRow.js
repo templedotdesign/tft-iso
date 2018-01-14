@@ -1,5 +1,7 @@
+//Core
 import React from 'react';
 
+//Components
 import ImageBox from '../imageBox/imageBox';
 
 
@@ -16,7 +18,7 @@ const imageBoxRow = (props) => {
     <div style={style}>
       {props.boxes.map((box, index) => {
         return (
-          <ImageBox key={Math.random()} {...props.boxes[index]}/>
+          <ImageBox key={Math.random()} {...props.boxes[index]} style={props.style}/>
         );
       })}
     </div>

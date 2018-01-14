@@ -1,5 +1,7 @@
+//Core
 import React from 'react';
 
+//CSS
 import classes from './footer.css';
 
 const footer = (props) => {
@@ -7,7 +9,7 @@ const footer = (props) => {
     <div className={classes.footer}>
       <img src={props.logo} alt='logo'/>
       <div className={classes.column}>
-        <p>contact@tonsoffuntravel.net</p>
+        <p style={{fontSize: '1.7rem'}}>contact@tonsoffuntravel.net</p>
         <p className={classes.row}> 
           <span><i className="fa fa-facebook-official" aria-hidden="true"></i></span>
           <span><i className="fa fa-twitter" aria-hidden="true"></i></span>

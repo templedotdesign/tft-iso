@@ -1,14 +1,15 @@
 .callToAction {
-  padding: 30px;
+  padding: 60px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
-  width: 80%;
-  margin: 50px auto;
+  width: 60%;
+  margin: 0 auto;
   font-size: 1.3rem;
-  background-color: white;
+  background-color: #2376ec;
+  color: white;
 }
 
 .callToAction button {
@@ -16,6 +17,8 @@
   font-family: inherit;
   font-size: 1.2rem;
   border-radius: 5px;  
+  background-color: white;
+  color: black;
 }
 
 .callToAction button:hover {

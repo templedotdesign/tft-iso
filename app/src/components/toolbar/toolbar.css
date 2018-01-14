@@ -4,6 +4,7 @@
   left: 0;
   z-index: 100;
   width: 100%;
+  min-height: 100px;
   background-color: white;
   padding: 30px 50px;
   display: flex;
@@ -18,4 +19,21 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.menu {
+  font-size: 1.2rem;
+}
+
+@media(max-width: 750px) {
+  .row {
+    display: none;
+  }
+}
+
+@media(min-width: 751px) {
+  .menu {
+    display: none;
+  }
+}
+
 

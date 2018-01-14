@@ -1,22 +1,32 @@
-import React from 'react';
+//Core
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
+//CSS
 import classes from './callToAction.css';
 
-const callToAction = (props) => {
-  return (
-    <div className={classes.callToAction}>
-      <div>
-        <h3>{props.title}</h3>
-        <p>{props.caption}</p>
-      </div>
-      <div>
-        <button>{props.buttonTitle}</button>
-      </div>
-    </div>
-  );
-};
+class CallToAction extends Component {
+  onClick = (event, to) => {
+    event.preventDefault();
+    this.props.history.push(to);
+  }
 
-export default callToAction;
+  render() {
+    return (
+      <div className={classes.callToAction}>
+        <div>
+          <h3>{this.props.title}</h3>
+          <p>{this.props.caption}</p>
+        </div>
+        <div>
+          <button onClick={(event) => this.onClick(event, this.props.to)}>{this.props.buttonTitle}</button>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default withRouter(CallToAction);
   
 
 

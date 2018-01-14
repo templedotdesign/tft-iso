@@ -1,3 +1,4 @@
+//Core
 import React from 'react';
 
 const banner = (props) => {
@@ -6,14 +7,14 @@ const banner = (props) => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     display: 'flex',
-    alignItems: 'flex-end',
+    alignItems: props.alignment,
     justifyContent: 'center',
     color: 'white',
     height: '80vh'
   }
   return (
     <div style={style}>
-      <h1 style={{paddingBottom: '70px'}}>{props.heading}</h1>
+      <h1 style={{padding: '70px 0'}}>{props.heading}</h1>
     </div>
   );
 }

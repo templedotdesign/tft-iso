@@ -1,5 +1,7 @@
+//Core
 import React from 'react';
 
+//Components
 import Wrapper from '../wrapper/wrapper';
 import Toolbar from '../toolbar/toolbar';
 import Footer from '../footer/footer';

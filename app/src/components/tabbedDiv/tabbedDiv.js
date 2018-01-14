@@ -1,8 +1,11 @@
+//CSS
 import React, { Component } from 'react';
 
+//Components
 import Wrapper from '../wrapper/wrapper';
 import Tab from '../tab/tab';
 
+//CSS
 import classes from './tabbedDiv.css';
 
 class TabbedDiv extends Component {

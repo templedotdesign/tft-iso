@@ -1,5 +1,7 @@
+//Core
 import React from 'react';
 
+//CSS
 import classes from './tab.css';
 
 const tab = (props) => {
