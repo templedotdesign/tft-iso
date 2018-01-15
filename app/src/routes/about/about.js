@@ -1,12 +1,18 @@
 //Core
-import React from 'react';
+import React, { Component } from 'react';
 
-const about = (props) => {
-  return (
-    <div style={{marginTop: '100px'}}>
-      About
-    </div>
-  );
-};
+class About extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
 
-export default about;
+  render() {
+    return (
+      <div style={{marginTop: '100px'}}>
+        About
+      </div>
+    );
+  }
+}
+
+export default About;

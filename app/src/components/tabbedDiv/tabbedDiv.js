@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 //Components
-import Wrapper from '../wrapper/wrapper';
 import Tab from '../tab/tab';
 
 //CSS
@@ -31,7 +30,7 @@ class TabbedDiv extends Component {
     let number = this.state.currentIndex + 1;
     let content = <h1 style={{textAlign: 'center'}}>Content For Tab {number}</h1>
     return (
-      <Wrapper>
+      <div style={{width: '45vw'}}>
         <div className={classes.tabs}>
           <Tab title='Tab 1' current={this.state.tabs[0]} clicked={(event) => this.updateTabs(event, 0)}/>
           <Tab title='Tab 2' current={this.state.tabs[1]} clicked={(event) => this.updateTabs(event, 1)}/>
@@ -41,7 +40,7 @@ class TabbedDiv extends Component {
         <div className={classes.content}>
           {content}
         </div>
-      </Wrapper>
+      </div>
     );
   }
 }

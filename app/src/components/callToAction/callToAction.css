@@ -5,7 +5,6 @@
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
-  width: 60%;
   margin: 0 auto;
   font-size: 1.3rem;
   background-color: #2376ec;
@@ -17,13 +16,15 @@
   font-family: inherit;
   font-size: 1.2rem;
   border-radius: 5px;  
-  background-color: white;
-  color: black;
+  background-color: #2376ec;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 1px 1px 3px black;
 }
 
 .callToAction button:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #2376ec;
 }
 
 

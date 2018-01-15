@@ -16,11 +16,15 @@
   font-family: inherit;
   font-size: 1.2rem;
   border-radius: 5px;
+  border: 1px solid #2376ec;
+  background-color: #2376ec;
+  color: white;
+  box-shadow: 1px 1px 3px black;
 }
 
 .imageBox button:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #2376ec;
 }
 
 .imageBox a {
@@ -29,15 +33,19 @@
   font-family: inherit;
   font-size: 1.2rem;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #2376ec;
+  background-color: #2376ec;
+  color: white;
+  box-shadow: 1px 1px 3px black;
 }
 
 .imageBox a:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #2376ec;
 }
 
 .imageBox p {
   margin-bottom: 20px;
   font-size: 1.2rem;
+  color: #2376ec;
 }

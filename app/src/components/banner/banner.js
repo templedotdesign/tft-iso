@@ -5,7 +5,7 @@ const banner = (props) => {
   let style = {
     background: `url(${props.imageUrl})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: props.position,
     display: 'flex',
     alignItems: props.alignment,
     justifyContent: 'center',

@@ -1,12 +1,18 @@
 //Core
-import React from 'react';
+import React, { Component } from 'react';
 
-const agents = (props) => {
-  return (
-    <div style={{marginTop: '100px'}}>
-      Agents
-    </div>
-  );
-};
+class Agents extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
 
-export default agents;
+  render() {
+    return (
+      <div style={{marginTop: '100px'}}>
+        Agents
+      </div>
+    );
+  }
+}
+
+export default Agents;

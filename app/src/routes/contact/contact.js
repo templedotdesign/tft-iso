@@ -1,12 +1,18 @@
 //Core
-import React from 'react';
+import React, { Component } from 'react';
 
-const contact = (props) => {
-  return (
-    <div style={{marginTop: '100px'}}>
-      Contact
-    </div>
-  );
-};
+class Contact extends Component {
+  componentDidMount() {
+    window.scroll(0,0);
+  }
 
-export default contact;
+  render() {
+    return (
+      <div style={{marginTop: '100px'}}>
+        Contact
+      </div>
+    );
+  }
+}
+
+export default Contact;

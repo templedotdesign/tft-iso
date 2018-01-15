@@ -13,7 +13,7 @@ class CallToAction extends Component {
 
   render() {
     return (
-      <div className={classes.callToAction}>
+      <div className={classes.callToAction} style={{width: this.props.width}}>
         <div>
           <h3>{this.props.title}</h3>
           <p>{this.props.caption}</p>
