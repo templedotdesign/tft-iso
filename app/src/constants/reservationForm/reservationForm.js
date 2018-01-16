@@ -127,7 +127,7 @@ export const CABIN_TYPES = [
   { value: 'Suite', name: 'Suite' }
 ];
 
-export const API_KEY = '9A9535E5-B636-4C3B-BAA7-56C87E2FD076';
+export const API_KEY = '...';
 
 export const TERMS_ONE = `By submitting, you certify that you are the cardholder and are authorizing the travel agency or its chosen 
 Tour Operator/Supplier/Cruise Line to charge the listed amount to the credit card. You certify that you have verified that all 
