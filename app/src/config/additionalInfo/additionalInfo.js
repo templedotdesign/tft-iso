@@ -5,7 +5,7 @@ export default {
       rows: '10'
     },
     elementType: 'textarea',
-    label: 'Special Requests:',
+    label: 'Special Requests / Notes / Special Occasions While Traveling:',
     options: [],
     touched: false,
     value: '',

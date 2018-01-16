@@ -9,14 +9,15 @@ import Forms from '../../routes/forms/forms';
 import GroupTravel from '../../routes/groupTravel/groupTravel';
 import Excursions from '../../routes/excursions/excursions';
 import About from '../../routes/about/about';
+import Agent from '../../routes/agents/agent/agent';
 import Agents from '../../routes/agents/agents';
 import Contact from '../../routes/contact/contact';
-import Reservation from '../../routes/reservation/reservation';
-import Payment from '../../routes/payment/payment';
-import Terms from '../../routes/terms/terms';
-import Paris from '../../routes/paris/paris';
-import Nashville from '../../routes/nashville/nashville';
-import Cancun from '../../routes/cancun/cancun'
+import Reservation from '../../routes/forms/reservation/reservation';
+import Payment from '../../routes/forms/payment/payment';
+import Terms from '../../routes/forms/terms/terms';
+import Paris from '../../routes/groupTravel/paris/paris';
+import Nashville from '../../routes/groupTravel/nashville/nashville';
+import Cancun from '../../routes/groupTravel/cancun/cancun'
 
 //Assets
 import logo from '../../assets/tftlogo.jpg';
@@ -35,7 +36,8 @@ const app = () => {
         <Route path='/group-travel/cancun' component={Cancun}/>
         <Route path='/excursions' component={Excursions}/>
         <Route path='/about' component={About}/>
-        <Route path='/agents' component={Agents}/>
+        <Route path='/agents' component={Agents} exact/>
+        <Route path='/agents/name' component={Agent}/>
         <Route path='/contact' component={Contact}/>
         <Route path='/terms' component={Terms}/>
       </Layout>

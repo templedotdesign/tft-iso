@@ -89,10 +89,10 @@ export const YES_NO_AIRFARE = [
 
 export const PAYMENT_TYPES = [
   { value: null, name: 'Select' },
-  { value: 'American Express', name: 'American Express' },
-  { value: 'Discover', name: 'Discover' },
-  { value: 'Mastercard', name: 'Mastercard' },
-  { value: 'Visa', name: 'Visa' }
+  { value: 'AMEX', name: 'American Express' },
+  { value: 'DISCOVER', name: 'Discover' },
+  { value: 'MC', name: 'Mastercard' },
+  { value: 'VISA', name: 'Visa' }
 ];
 
 export const PAYMENT_AMOUNTS = [

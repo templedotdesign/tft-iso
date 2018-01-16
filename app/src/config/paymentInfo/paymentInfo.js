@@ -94,7 +94,7 @@ export default {
     label: 'Pay In Full Or Deposit:',
     options: Constants.PAYMENT_AMOUNTS,
     touched: false,
-    value: '',
+    value: 'Deposit',
     validation: {
       required: false
     },

@@ -2,14 +2,16 @@
 import React, { Component } from 'react';
 
 //Components
-import Banner from '../../components/banner/banner';
+import Banner from '../../components/layout/banner/banner';
 import ImageBox from '../../components/imageBox/imageBox';
+import Row from '../../components/layout/row/row';
+import Wrapper from '../../components/layout/wrapper/wrapper';
 
 //Assets
-import groupImage from '../../assets/group.jpeg';
-import parisImage from '../../assets/paris.jpeg';
-import nashvilleImage from '../../assets/nashville.jpeg';
 import cancunImage from '../../assets/cancun.jpeg';
+import groupImage from '../../assets/group.jpeg';
+import nashvilleImage from '../../assets/nashville.jpeg';
+import parisImage from '../../assets/paris.jpeg';
 
 class GroupTravel extends Component {
   componentDidMount() {
@@ -17,18 +19,15 @@ class GroupTravel extends Component {
   }
 
   render() {
-    let box1 = {src: parisImage, buttonTitle: 'Paris 2018', caption: '', to: '/group-travel/paris', exterior: false }
-    let box2 = {src: nashvilleImage, buttonTitle: 'Nashville 2018', caption: '', to: '/group-travel/nashville', exterior: false }
-    let box3 = {src: cancunImage, buttonTitle: 'Beach Palace Cancun 2019', caption: '', to: '/group-travel/cancun', exterior: false }
     return (
-      <div>
-        <Banner imageUrl={groupImage} heading='Group Travel' alignment='center'/>
-        <div style={{margin: '0 auto', width: '50%', padding: '50px 0'}}>
-          <ImageBox {...box1}/>
-          <ImageBox {...box2}/>
-          <ImageBox {...box3}/>
-        </div>
-      </div>
+      <Wrapper>
+        <Banner src={groupImage} heading='Group Travel' alignment='center'/>
+        <Row justification='space-around' alignment='center'>
+          <ImageBox src={parisImage} buttonTitle='Paris 2018' to='/group-travel/paris'/>
+          <ImageBox src={nashvilleImage} buttonTitle='Nashville 2018' to='/group-travel/nashville'/>
+          <ImageBox src={cancunImage} buttonTitle='Beach Palace Cancun 2019' to='/group-travel/cancun'/>
+        </Row>
+      </Wrapper>
     );
   }
 }

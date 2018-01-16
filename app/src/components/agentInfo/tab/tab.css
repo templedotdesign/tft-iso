@@ -1,0 +1,13 @@
+.tab {
+  border-color: black;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+}
+
+.bottomBorder {
+  border-bottom: 1px solid black;
+}

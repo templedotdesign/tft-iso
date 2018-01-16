@@ -2,15 +2,15 @@ export default {
   country: {
     attributes: {
       type: 'text',
-      placeholder: 'USA'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Your Country:',
     options: [],
     touched: false,
-    value: '',
+    value: 'USA',
     validation: {
-      required: true
+      required: false
     },
     valid: false
   },
@@ -112,12 +112,12 @@ export default {
       placeholder: '123-123-1234'
     },
     elementType: 'input',
-    label: 'Phone:',
+    label: 'Home Phone:',
     options: [],
     touched: false,
     value: '',
     validation: {
-      required: true
+      required: false
     },
     valid: false
   },
@@ -127,7 +127,7 @@ export default {
       placeholder: '123-123-1234'
     },
     elementType: 'input',
-    label: 'Phone 2:',
+    label: 'Cell Phone:',
     options: [],
     touched: false,
     value: '',

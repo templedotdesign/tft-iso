@@ -12,17 +12,25 @@ class ImageBox extends Component {
   };
 
   render() {
-    let button = null;
-    if(this.props.exterior === true) {
-      button = <a href={this.props.to} target='_blank' rel='noopener noreferrer'>{this.props.buttonTitle}</a>
+    let button = null; 
+    let alt = '';   
+    if(!this.props.noLink) {
+      if(this.props.exterior === true) {
+        alt = this.props.buttonTitle;
+        button = <a href={this.props.to} target='_blank' rel='noopener noreferrer'>{this.props.buttonTitle}</a>
+      } else {
+        alt = this.props.buttonTitle
+        button = <a onClick={(event) => this.onClick(event, this.props.to)}>{this.props.buttonTitle}</a>
+      }
     } else {
-      button = <button onClick={(event) => this.onClick(event, this.props.to)}>{this.props.buttonTitle}</button>
+      alt = this.props.alt
     }
+    
     return (
       <div className={classes.imageBox}>
-        <img src={this.props.src} alt={this.props.buttonTitle} style={this.props.style}/>
+        <img src={this.props.src} alt={alt} style={this.props.style}/>
         {button}
-        <p>{this.props.caption}</p>
+        <h3 style={{fontSize: this.props.fontSize}}>{this.props.caption}</h3>
       </div>
     );
   }

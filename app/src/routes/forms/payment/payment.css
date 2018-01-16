@@ -1,0 +1,19 @@
+.form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+@media(max-width:750px) {
+  .form {
+    width: 90%;
+  }
+
+  .form iframe {
+    height: 170vh;
+  }
+}

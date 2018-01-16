@@ -1,0 +1,28 @@
+.agentInfo {
+  width: 45vw;
+  margin: 30px 0;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  min-height: 70vh;
+  border-color: black;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+  font-size: 1.7rem;
+}
+
+.content p {
+  padding: 20px 0;
+}
