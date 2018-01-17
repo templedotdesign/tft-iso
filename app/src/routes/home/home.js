@@ -12,12 +12,12 @@ import Row from '../../components/layout/row/row';
 import Wrapper from '../../components/layout/wrapper/wrapper';
 
 //Assets
-import beachImage from '../../assets/sunset2.jpeg';
-import globeImage from '../../assets/globe.jpeg';
-import handsImage from '../../assets/hands.jpeg';
-import mapImage from '../../assets/map.jpeg';
-import stephImage from '../../assets/stephanie-temple.jpg';
-import wordImage from '../../assets/world.jpg';
+import backgroundImage from '../../assets/background.png';
+import bobStephImage from '../../assets/bobSteph.png';
+import familyImage from '../../assets/family.png';
+import groupImage from '../../assets/group.png';
+import romanceImage from '../../assets/romance.png';
+import worldImage from '../../assets/world.png';
 
 class Home extends Component {
   componentDidMount() {
@@ -30,22 +30,22 @@ class Home extends Component {
     ];
     return (
       <Wrapper>
-        <Banner heading="Let Us Do All The Work And You'll Have Tons Of Fun On Your Next Trip!" src={wordImage} alignment='flex-end'/>
+        <Banner heading="Let Us Do All The Work And You'll Have Tons Of Fun On Your Next Trip!" src={worldImage} alignment='flex-end'/>
         <div style={{backgroundColor: 'white'}}>
           <Row justification='space-around' alignment='center'>
-            <Avatar src={stephImage} alt='steph'/>
+            <Avatar src={bobStephImage} alt='bob and steph'/>
             <AgentInfo currentAgent='stephanieTemple'/>
           </Row>
           <Row justification='space-between' alignment='center'>
-            <ImageBox src={globeImage} buttonTitle='Take The Tour' caption='Find Out Why We Do What We Do.' to='/about'/>
-            <ImageBox src={handsImage} buttonTitle='Romance Travel' caption='Feel The Love!' to='http://twoheartsonetrip.com/' exterior/>
-            <ImageBox src={mapImage} buttonTitle='Group Travel' caption='See The World With Us.' to='/group-travel'/>
+            <ImageBox src={familyImage} buttonTitle='Family Travel' caption='Make Some Memories.' to='/family-travel'/>
+            <ImageBox src={romanceImage} buttonTitle='Romance Travel' caption='Feel The Love!' to='http://twoheartsonetrip.com/' exterior/>
+            <ImageBox src={groupImage} buttonTitle='Group Travel' caption='See The World With Us.' to='/group-travel'/>
           </Row>
         </div>
         <QuoteWindow quote="We travel not to escape life, but for life not to escape us." author='Anonymous'/>
-        <Background src={beachImage} alt="mountain pier"/>        
+        <Background src={backgroundImage} alt="mountain pier"/>        
         <div style={{padding: '100px 0', backgroundColor: 'white'}}>
-          <CallToAction title="Let's Connect!" caption= 'Ready To Book With Us?' buttons={buttons}/>
+          <CallToAction title="Let's Connect!" buttons={buttons} vertical/>
         </div>
       </Wrapper>
     );

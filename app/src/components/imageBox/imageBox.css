@@ -7,8 +7,8 @@
 }
 
 .imageBox img {
-  width: 80%;
-  height: 80%;
+  width: 25vw;
+  height: 25vw;
   border-radius: 5px;
 }
 
@@ -50,4 +50,11 @@
   margin-bottom: 20px;
   font-size: 1.2rem;
   color: #2376ec;
+}
+
+@media(max-width:750px) {
+  .imageBox img {
+    width: 50vw;
+    height: 50vw;
+  }
 }

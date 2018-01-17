@@ -14,7 +14,6 @@
 
 .cancun img {
   width: 60%;
-  margin: 30px auto;
 }
 
 .cancun ul {
@@ -66,4 +65,33 @@
 .cancun td {
   padding: 20px;
   text-align: center;
+}
+
+.cancun div {
+  padding: 10px;
+}
+
+@media(max-width:750px) {
+  .cancun {
+    width: 100%;
+  }
+  .cancun p, h3, ul {
+    padding: 15px;
+  }
+
+  .cancun p, h3 {
+    text-align: center;
+  }
+  .cancun img {
+    width: 85%;
+  }
+
+  .cancun table {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .cancun td {
+    padding: 5px;
+  }
 }

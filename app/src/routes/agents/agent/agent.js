@@ -9,7 +9,7 @@ import Row from '../../../components/layout/row/row';
 import AgentInfo from '../../../components/agentInfo/agentInfo';
 
 //Assets
-import stephImage from '../../../assets/stephanie-temple.jpg'
+import stephImage from '../../../assets/steph.png';
 
 class Agent extends Component {
   componentDidMount() {

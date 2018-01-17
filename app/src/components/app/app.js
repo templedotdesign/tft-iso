@@ -8,7 +8,6 @@ import Home from '../../routes/home/home';
 import Forms from '../../routes/forms/forms';
 import GroupTravel from '../../routes/groupTravel/groupTravel';
 import Excursions from '../../routes/excursions/excursions';
-import About from '../../routes/about/about';
 import Agent from '../../routes/agents/agent/agent';
 import Agents from '../../routes/agents/agents';
 import Contact from '../../routes/contact/contact';
@@ -18,9 +17,10 @@ import Terms from '../../routes/forms/terms/terms';
 import Paris from '../../routes/groupTravel/paris/paris';
 import Nashville from '../../routes/groupTravel/nashville/nashville';
 import Cancun from '../../routes/groupTravel/cancun/cancun'
+import FamilyTravel from '../../routes/familyTravel/familyTravel';
 
 //Assets
-import logo from '../../assets/tftlogo.jpg';
+import logo from '../../assets/tftlogo.png';
 
 const app = () => {
   return (
@@ -35,7 +35,7 @@ const app = () => {
         <Route path='/group-travel/nashville' component={Nashville}/>
         <Route path='/group-travel/cancun' component={Cancun}/>
         <Route path='/excursions' component={Excursions}/>
-        <Route path='/about' component={About}/>
+        <Route path='/family-travel' component={FamilyTravel}/>
         <Route path='/agents' component={Agents} exact/>
         <Route path='/agents/name' component={Agent}/>
         <Route path='/contact' component={Contact}/>

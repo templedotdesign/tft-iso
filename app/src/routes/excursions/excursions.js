@@ -8,8 +8,8 @@ import Row from '../../components/layout/row/row';
 import Wrapper from '../../components/layout/wrapper/wrapper';
 
 //Assets
-import scubaImage from '../../assets/scuba.jpeg';
-import skyDiveImage from '../../assets/skydiving.jpg';
+import scubaImage from '../../assets/scuba.png';
+import skyDiveImage from '../../assets/skydiving.png';
 
 class Excursions extends Component {
   componentDidMount() {

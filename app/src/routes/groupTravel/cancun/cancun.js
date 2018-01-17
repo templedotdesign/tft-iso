@@ -11,7 +11,7 @@ import Wrapper from '../../../components/layout/wrapper/wrapper';
 import classes from './cancun.css';
 
 //Assets
-import palmImage from '../../../assets/palm.jpeg';
+import beachImage from '../../../assets/beachPalace.png';
 
 class Cancun extends Component {
   componentDidMount() {
@@ -41,7 +41,7 @@ class Cancun extends Component {
             our convenient payment plan, to make payments that fit your budget.  Beach Palace is a family resort, 
             but based on our dates, we do not anticipate a large number of children to be on property.
           </p>
-          <ImageBox src={palmImage} alt='palm tree' style={{width: '50%'}} noLink/>
+          <ImageBox src={beachImage} alt='beach palace' noLink/>
           <p><em>What's Included in our All Inclusive Stay at Beach Palace Cancun?</em></p>
           <ul>
             <li><em>Luxurious Accommodations</em></li>

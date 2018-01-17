@@ -8,10 +8,10 @@ import Row from '../../components/layout/row/row';
 import Wrapper from '../../components/layout/wrapper/wrapper';
 
 //Assets
-import cancunImage from '../../assets/cancun.jpeg';
-import groupImage from '../../assets/group.jpeg';
-import nashvilleImage from '../../assets/nashville.jpeg';
-import parisImage from '../../assets/paris.jpeg';
+import cancunImage from '../../assets/cancun.png';
+import groupImage from '../../assets/group1.png';
+import nashvilleImage from '../../assets/nashville.png';
+import parisImage from '../../assets/paris.png';
 
 class GroupTravel extends Component {
   componentDidMount() {

@@ -15,7 +15,7 @@ const toolbar = (props) => {
         <NavLinks/>
       </div>
       <div className={classes.menu}>
-        <i className="fa fa-ellipsis-v" aria-hidden="true"></i>
+        <i onClick={props.clicked} className="fa fa-ellipsis-v" aria-hidden="true"></i>
       </div>
     </div>
   );

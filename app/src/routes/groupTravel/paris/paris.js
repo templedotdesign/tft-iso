@@ -11,9 +11,9 @@ import Wrapper from '../../../components/layout/wrapper/wrapper';
 import classes from './paris.css'
 
 //Assets
-import riverImage from '../../../assets/river.jpeg';
-import parisImage from '../../../assets/paris2.jpeg';
-import mapImage from '../../../assets/cruiseMap.jpeg';
+import riverImage from '../../../assets/river.png';
+import parisImage from '../../../assets/paris2.png';
+import mapImage from '../../../assets/cruiseMap.png';
 
 
 class Paris extends Component {
@@ -32,7 +32,7 @@ class Paris extends Component {
           <h3 style={{textAlign: 'center'}}>
             Join Bob & Stephanie Temple on our Group River Cruise 2018 France with Avalon Waterways
           </h3>
-          <ImageBox src={riverImage} caption='July 14-21, 2018, 8 Day River Cruise Paris-Paris Itinerary' alt='river' style={{width: '50%'}} fontSize='1.7rem' noLink/>
+          <ImageBox src={riverImage} caption='July 14-21, 2018, 8 Day River Cruise Paris-Paris Itinerary' alt='river' fontSize='1.7rem' noLink/>
           <p>
             The long awaited, European River Cruise. Avalon Waterways, Paris to Normandy, 8 Day River Cruise from 
             Paris to Paris. Departing Paris July 14, 2018 return date of July 21, 2018. Cost is $2,149 per person, 
@@ -50,7 +50,7 @@ class Paris extends Component {
             miss out!  Contact us today for a detailed quote.
           </p>
           <CallToAction title='Ready To See Paris?' buttons={buttons} exterior vertical/>
-          <ImageBox src={parisImage} caption='Go for the Sights' alt='paris' style={{width: '50%'}} fontSize='1.7rem' noLink/>
+          <ImageBox src={parisImage} caption='Go for the Sights' alt='paris' fontSize='1.7rem' noLink/>
           <p>
             This fabulous river cruise combines time in France’s unparalleled capital of Paris with beautiful 
             scenery along the Seine River and the picturesque and historical region of Normandy.  Embark on your 
@@ -75,7 +75,7 @@ class Paris extends Component {
             glass pyramid contrasting its ancient architecture. A guided walk through the historic Île St. Louis 
             with its narrow streets, and Île de la Cité where medieval Paris was founded, will be a delight.
           </p>
-          <ImageBox src={mapImage} caption='Details' alt='cruise map' style={{width: '50%'}} fontSize='1.7rem' noLink/>
+          <ImageBox src={mapImage} caption='Details' alt='cruise map' fontSize='1.7rem' noLink/>
           <p>
             <span>Day 1 in Paris, France (Embarkation).</span>  Welcome to Paris, France’s capital on the Seine River, the “City 
             of Light,” where romance fills the air. This afternoon, board your river cruise vessel and meet your 

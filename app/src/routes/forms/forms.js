@@ -8,11 +8,11 @@ import Row from '../../components/layout/row/row';
 import Wrapper from '../../components/layout/wrapper/wrapper';
 
 //Assets
-import airplaneImage from '../../assets/airplane2.jpeg';
-import deskImage from '../../assets/desk.jpeg';
-import moneyImage from '../../assets/money.jpg';
-import passportImage from '../../assets/passport.jpeg';
-import surveyImage from '../../assets/survey.jpeg';
+import deskImage from '../../assets/desk.png';
+import moneyImage from '../../assets/money.png';
+import passportImage from '../../assets/passport.png';
+import surveyImage from '../../assets/survey.png';
+import ticketsImage from '../../assets/tickets.png';
 
 class Forms extends Component {
   componentDidMount() {
@@ -24,7 +24,7 @@ class Forms extends Component {
       <Wrapper>
         <Banner heading='Forms' src={deskImage} alignment='center'/>
         <Row justification='space-around' alignment='center'>
-          <ImageBox src={airplaneImage} buttonTitle='Reservation Form' to='/forms/reservation'/>
+          <ImageBox src={ticketsImage} buttonTitle='Reservation Form' to='/forms/reservation'/>
           <ImageBox src={moneyImage} buttonTitle='Payment Form' to='/forms/payment'/>
         </Row>
         <Row justification='space-around' alignment='center'>

@@ -11,7 +11,7 @@ import Wrapper from '../../../components/layout/wrapper/wrapper';
 import classes from './nashville.css';
 
 //Assets
-import guitarImage from '../../../assets/guitar.jpeg';
+import guitarImage from '../../../assets/guitar.png';
 
 class Nashville extends Component {
   componentDidMount() {
@@ -48,7 +48,7 @@ class Nashville extends Component {
             On Sunday,  following hotel check out we will depart for Kenton at approximately 11:30 a.m., so that 
             we are home in time for everyone to prepare for their work week ahead.
           </p>
-          <ImageBox src={guitarImage} alt='guitar' style={{width: '50%'}} noLink/>
+          <ImageBox src={guitarImage} alt='guitar' noLink/>
           <div style={{textAlign: 'center', padding: '50px 0'}}>
             <p>Pricing</p>
             <p>Single Occupancy $675 Per Person</p>
@@ -61,10 +61,10 @@ class Nashville extends Component {
             After deposit, payments can be made on your schedule, as long as trip is paid in full before 8/1/18.  
             After 8/1/18 no refunds can be made, but trip is transferrable.
           </p>
-          <small>
+          <p className={classes.small}>
             Tons of Fun Travel reserves the right to cancel this group trip and refund monies paid if we do not 
             have 45 participants.
-          </small>
+          </p>
           <CallToAction title='Reserve Your Seat Today!' buttons={buttons} exterior vertical/>
         </div>
       </Wrapper>
