@@ -29,9 +29,9 @@ class Paris extends Component {
       <Wrapper>
         <Heading heading='Paris, 2018'/>
         <div className={classes.paris}>
-          <h3 style={{textAlign: 'center'}}>
+          <h2>
             Join Bob & Stephanie Temple on our Group River Cruise 2018 France with Avalon Waterways
-          </h3>
+          </h2>
           <ImageBox src={riverImage} caption='July 14-21, 2018, 8 Day River Cruise Paris-Paris Itinerary' alt='river' fontSize='1.7rem' noLink/>
           <p>
             The long awaited, European River Cruise. Avalon Waterways, Paris to Normandy, 8 Day River Cruise from 

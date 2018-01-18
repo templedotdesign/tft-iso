@@ -11,7 +11,7 @@ const field = (props) => {
   let label = null;
   if(props.required) {
     label = (
-      <label style={{fontWeight: 'bold'}}>{props.label}</label>
+      <label className={classes.bold}>{props.label}</label>
     );
   } else {
     label = (

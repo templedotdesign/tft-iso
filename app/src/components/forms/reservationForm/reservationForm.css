@@ -33,6 +33,7 @@
 .reservationForm hr {
   border-color: #2376ec;
 }
+
 .reservationForm button {
   display: block;
   padding: 20px;
@@ -66,7 +67,7 @@
     width: 100%;
   }
 
-  .reservationForm select, .reservationForm  input, .reservationForm textarea {
+  .reservationForm select, .reservationForm input, .reservationForm textarea {
     background-color: #ccc;
   }
 }

@@ -27,9 +27,9 @@ class Nashville extends Component {
       <Wrapper>
         <Heading heading='Nashville, 2018'/>
         <div className={classes.nashville}>
-          <h3 style={{textAlign: 'center'}}>
+          <h2>
             Join Us For "Have Tons Of Fun In Nashville Bus Trip" October 5th-7th, 2018 
-          </h3>
+          </h2>
           <p>
             Join Bob & Stephanie Temple on their motor coach trip from Kenton, Ohio to Nashville, Tennessee.  We 
             will depart Kenton at 7:30 a.m. on Friday, October 5, 2018. Upon arrival in Nashville, we will check 
@@ -49,7 +49,7 @@ class Nashville extends Component {
             we are home in time for everyone to prepare for their work week ahead.
           </p>
           <ImageBox src={guitarImage} alt='guitar' noLink/>
-          <div style={{textAlign: 'center', padding: '50px 0'}}>
+          <div className={classes.pricing}>
             <p>Pricing</p>
             <p>Single Occupancy $675 Per Person</p>
             <p>Double Occupancy $445 Per Person</p>

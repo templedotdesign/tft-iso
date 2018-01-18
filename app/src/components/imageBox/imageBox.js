@@ -30,7 +30,7 @@ class ImageBox extends Component {
       <div className={classes.imageBox}>
         <img src={this.props.src} alt={alt} style={this.props.style}/>
         {button}
-        <h3 style={{fontSize: this.props.fontSize}}>{this.props.caption}</h3>
+        <h3>{this.props.caption}</h3>
       </div>
     );
   }

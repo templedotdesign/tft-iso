@@ -1,6 +1,9 @@
 //Core
 import React from 'react';
 
+//CSS
+import classes from './banner.css';
+
 const banner = (props) => {
   let style = {
     background: `url(${props.src})`,
@@ -14,7 +17,7 @@ const banner = (props) => {
   }
   return (
     <div style={style}>
-      <h1 style={{padding: '70px 0'}}>{props.heading}</h1>
+      <h1 className={classes.heading}>{props.heading}</h1>
     </div>
   );
 }

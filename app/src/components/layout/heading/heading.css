@@ -6,10 +6,6 @@
   color: #2376ec;
 }
 
-.heading hr {
-  margin: 30px 0;
-}
-
 @media(max-width:750px) {
   .heading {
     text-align: center;

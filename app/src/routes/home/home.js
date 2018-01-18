@@ -26,7 +26,7 @@ class Home extends Component {
   
   render() {
     const buttons = [
-      { buttonTitle: 'Contact Us', to: '/contact'}
+      { buttonTitle: 'Contact Us', to: 'http://www.emailmeform.com/builder/form/3vZY2Ke2bfgz' }
     ];
     return (
       <Wrapper>
@@ -34,7 +34,7 @@ class Home extends Component {
         <div style={{backgroundColor: 'white'}}>
           <Row justification='space-around' alignment='center'>
             <Avatar src={bobStephImage} alt='bob and steph'/>
-            <AgentInfo currentAgent='stephanieTemple'/>
+            <AgentInfo currentAgent='owners'/>
           </Row>
           <Row justification='space-between' alignment='center'>
             <ImageBox src={familyImage} buttonTitle='Family Travel' caption='Make Some Memories.' to='/family-travel'/>
@@ -45,7 +45,7 @@ class Home extends Component {
         <QuoteWindow quote="We travel not to escape life, but for life not to escape us." author='Anonymous'/>
         <Background src={backgroundImage} alt="mountain pier"/>        
         <div style={{padding: '100px 0', backgroundColor: 'white'}}>
-          <CallToAction title="Let's Connect!" buttons={buttons} vertical/>
+          <CallToAction title="Let's Connect!" buttons={buttons} exterior vertical/>
         </div>
       </Wrapper>
     );

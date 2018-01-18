@@ -28,4 +28,10 @@
   color: #2376ec;
 }
 
+@media(max-width:750px) {
+  .callToAction {
+    width: 90%;
+  }
+}
+
 

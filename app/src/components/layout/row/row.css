@@ -1,4 +1,4 @@
-.row {
+.row, .reverseRow {
   width: 100%;
   display: flex;
   padding: 30px;
@@ -7,6 +7,10 @@
 @media(max-width: 750px) {
   .row {
     flex-direction: column;
+  }
+
+  .reverseRow {
+    flex-direction: column-reverse;
   }
 }
 

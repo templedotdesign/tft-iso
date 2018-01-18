@@ -4,53 +4,17 @@
   font-size: 1.5rem;
 }
 
-.paris hr {
-  margin: 30px 0;
-}
-
 .paris img {
   width: 60%;
-}
-
-.paris p {
-  padding-bottom: 15px;
 }
 
 .paris span {
   font-weight: bold;
 }
 
-.paris div {
-  padding: 10px;
-}
-
-.buttons {
-  background-color: #2376ec;
-  padding: 30px;
-  border-radius: 5px;
-  margin-top: 30px;
-}
-
-.button {
-  background-color: #2376ec;
-  border: 1px solid white;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px black;
-}
-
-.button:hover {
-  background-color: white;
-}
-
 @media(max-width:750px) {
   .paris img {
     width: 85%;
-  }
-
-  .paris p, h3 {
-    text-align: center;
   }
 }
 

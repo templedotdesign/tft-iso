@@ -8,7 +8,7 @@ const quoteWindow = (props) => {
   return (
     <div className={classes.quoteWindow}>
       <h1>{props.quote}</h1>
-      <h3>- {props.author}</h3>
+      <h2>- {props.author}</h2>
     </div>
   );
 };

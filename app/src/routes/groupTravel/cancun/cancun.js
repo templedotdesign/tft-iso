@@ -20,15 +20,15 @@ class Cancun extends Component {
 
   render() {
     const buttons = [
-      {buttonTitle: 'Reservation Request', to: 'http://www.emailmeform.com/builder/form/e0c76cj9LcD90ZA6emt'}
+      {buttonTitle: 'Reservation Request', to: 'http://www.emailmeform.com/builder/form/WXuFA8bdOxwDgYp14'}
     ];
     return (
       <Wrapper>
         <Heading heading='Beach Palace Cancun, 2019'/>
         <div className={classes.cancun}>
-          <h3 style={{textAlign: 'center'}}>
+          <h2>
             Having Tons of Fun in Cancun - February 2019! 
-          </h3>
+          </h2>
           <p>
             Curious about all inclusive resorts?  Would you like to see some of the bluest water in the world?  
             This is a great opportunity to join Bob & Stephanie Temple on this all inclusive adults getaway to 
@@ -51,7 +51,7 @@ class Cancun extends Component {
             <li><em>Free Wi-fi & Free Calls to the US from your room phone</em></li>
             <li><em>Exchange Privileges with Moon Palace with motor coach transportation between resorts</em></li>
           </ul>
-          <p style={{paddingTop: '30px'}}>Palace Resorts vacations earn our clients, Resort Credit which can be redeemed for Spa, Golf, and Off Property Excursions.  Here's what you'll earn:</p>
+          <p className={classes.p}>Palace Resorts vacations earn our clients, Resort Credit which can be redeemed for Spa, Golf, and Off Property Excursions.  Here's what you'll earn:</p>
           <ul>
             <li>3 night stay $500 per room</li>
             <li>4 night stay $750 per room</li>
@@ -63,7 +63,7 @@ class Cancun extends Component {
           <h3>Superior Deluxe Lagoon View (cost per person) room & transfers only</h3>
           <table>
             <tbody>
-              <tr style={{backgroundColor: '#2376ec', color: 'white'}}>
+              <tr className={classes.tableTitle}>
                 <td>Occupancy</td>
                 <td>3 Nights</td>
                 <td>4 Nights</td>
@@ -103,7 +103,7 @@ class Cancun extends Component {
           <h3>Superior Deluxe Ocean View (cost per person) room & transfers only</h3>
           <table>
             <tbody>
-              <tr style={{backgroundColor: '#2376ec', color: 'white'}}>
+              <tr className={classes.tableTitle}>
                 <td>Occupancy</td>
                 <td>3 Nights</td>
                 <td>4 Nights</td>

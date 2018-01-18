@@ -32,16 +32,20 @@ class AgentInfo extends Component {
 
   render() {
     let content = [];
-    const agent = agents[this.state.currentAgent];
-    const agentKeys = Object.keys(agent);
-    let tabs = agentKeys.map((key, index) => {
-      if(index === this.state.currentIndex) {
-        agent[key].map((item) => {
-          return content.push(item);
-        })
-      }
-      return <Tab key={key} title={key} current={this.state.tabs[index]} clicked={(event) => this.updateTabs(event, index)}/> 
-    })
+    let tabs = [];
+    if(agents.names.includes(this.state.currentAgent)) {
+      const agent = agents[this.state.currentAgent];
+      const agentKeys = Object.keys(agent);
+      tabs = agentKeys.map((key, index) => {
+        if(index === this.state.currentIndex) {
+          agent[key].map((item) => {
+            return content.push(item);
+          })
+        }
+        return <Tab key={key} title={key} current={this.state.tabs[index]} clicked={(event) => this.updateTabs(event, index)}/> 
+      })
+    }
+    
     return (
       <div className={classes.agentInfo}>
         <div className={classes.tabs}>

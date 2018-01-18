@@ -4,94 +4,26 @@
   font-size: 1.5rem;
 }
 
-.cancun hr {
-  margin: 30px 0;
-}
-
-.cancun p, h3, ul {
-  padding-bottom: 15px;
-}
-
 .cancun img {
   width: 60%;
 }
 
-.cancun ul {
-  margin-left: 60px;
-}
-
 .small {
   font-size: .9rem;
-  padding: 30px 0;
+  padding: 30px 20px;
 }
 
-.buttons {
+.tableTitle {
   background-color: #2376ec;
-  padding: 30px;
-  border-radius: 5px;
-  margin-top: 30px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.button {
-  background-color: #2376ec;
-  border: 1px solid white;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px black;
-}
-
-.button:hover {
-  background-color: white;
-}
-
-.cancun table {
-  width: 100%;
-  margin: 30px 0;
-}
-
-.cancun table, tr, td {
-  border: 1px solid #2376ec;
-  border-collapse: collapse; 
-}
-
-.cancun td {
-  padding: 20px;
-  text-align: center;
-}
-
-.cancun div {
-  padding: 10px;
 }
 
 @media(max-width:750px) {
   .cancun {
     width: 100%;
   }
-  .cancun p, h3, ul {
-    padding: 15px;
-  }
-
-  .cancun p, h3 {
-    text-align: center;
-  }
+  
   .cancun img {
     width: 85%;
-  }
-
-  .cancun table {
-    width: 90vw;
-    margin: 0 auto;
-  }
-
-  .cancun td {
-    padding: 5px;
   }
 }

@@ -27,16 +27,16 @@ class CallToAction extends Component {
     })
     if(this.props.vertical) {
       style = {
-        flexDirection: 'column'
+        flexDirection: 'column',
       }
-      justification = 'space-around';
+      justification = 'space-around'; 
     } else {
       justification = 'flex-end'
     }
     return (
       <div className={classes.callToAction} style={style}>
         <div>
-          <h3>{this.props.title}</h3>
+          <h2>{this.props.title}</h2>
           <p>{this.props.caption}</p>
         </div>
         <Row justification={justification} alignment='center'>

@@ -5,6 +5,10 @@
   margin: 10px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .row {
   display: flex;
   justify-content: flex-end;
