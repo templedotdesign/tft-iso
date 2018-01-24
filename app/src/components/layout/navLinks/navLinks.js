@@ -17,7 +17,6 @@ const navLinks = (props) => {
       <a onClick={props.clicked} href='http://twoheartsonetrip.com/' target='_blank' rel='noopener noreferrer'>Romance Travel</a>
       <NavLink onClick={props.clicked} to='/family-travel' activeClassName={classes.active}>Family Travel</NavLink>
       <a onClick={props.clicked} href='https://www.disneytravelcenter.com/ms6f1ddcfc/' target='_blank' rel='noopener noreferrer'>Disney</a>      
-      <NavLink onClick={props.clicked} to='/excursions' activeClassName={classes.active}>Excursions</NavLink>      
       <NavLink onClick={props.clicked} to='/agents' activeClassName={classes.active}>Meet Our Agents</NavLink>
     </Wrapper>
   );

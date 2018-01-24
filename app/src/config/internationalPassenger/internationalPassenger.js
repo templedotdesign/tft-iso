@@ -4,7 +4,7 @@ export default {
   firstName: {
     attributes: {
       type: 'text',
-      placeholder: 'John'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'First Name:',
@@ -19,7 +19,7 @@ export default {
   middleName: {
     attributes: {
       type: 'text',
-      placeholder: 'Quentin'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Middle Name:',
@@ -34,7 +34,7 @@ export default {
   lastName: {
     attributes: {
       type: 'text',
-      placeholder: 'Doe'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Last Name:',
@@ -61,7 +61,7 @@ export default {
   passportNum: {
     attributes: {
       type: 'text',
-      placeholder: '#########'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Passport Number:',
@@ -76,7 +76,7 @@ export default {
   passportState: {
     attributes: {
       type: 'text',
-      placeholder: 'USA'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Passport Issuing Authority:',

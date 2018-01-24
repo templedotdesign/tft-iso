@@ -13,7 +13,7 @@ const notification = (props) => {
   } 
   return(
     <div className={attachedClasses.join(' ')}>
-      <h3>{props.text}</h3>
+      <h3 style={{color: 'white'}}>{props.text}</h3>
     </div>
   );
 };

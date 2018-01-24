@@ -2,7 +2,7 @@ export default {
   firstName: {
     attributes: {
       type: 'text',
-      placeholder: 'John'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'First Name:',
@@ -17,7 +17,7 @@ export default {
   lastName: {
     attributes: {
       type: 'text',
-      placeholder: 'Doe'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Last Name:',
@@ -32,7 +32,7 @@ export default {
   email: {
     attributes: {
       type: 'email',
-      placeholder: 'john@doe.com'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Your Email:',

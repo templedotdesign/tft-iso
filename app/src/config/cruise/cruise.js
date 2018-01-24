@@ -4,7 +4,7 @@ export default {
   resort: {
     attributes: {
       type: 'text',
-      placeholder: 'Princess Alaska'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Preferred Cruise:',

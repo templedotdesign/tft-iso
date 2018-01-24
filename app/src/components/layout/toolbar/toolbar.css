@@ -14,7 +14,7 @@
 }
 
 .row {
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -34,13 +34,13 @@ a:hover {
   color: #2376ec;
 }
 
-@media(max-width: 750px) {
+@media(max-width: 1025px) {
   .row {
     display: none;
   }
 }
 
-@media(min-width: 751px) {
+@media(min-width: 1026px) {
   .menu {
     display: none;
   }

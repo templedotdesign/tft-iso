@@ -8,7 +8,8 @@ const column = (props) => {
   const style = {
     justifyContent: props.justification,
     alignItems: props.alignment,
-    width: props.width
+    width: props.width,
+    height: props.height
   }
   return (
     <div className={classes.column} style={style}>

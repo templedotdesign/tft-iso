@@ -11,7 +11,7 @@ import Wrapper from '../../../components/layout/wrapper/wrapper';
 import classes from './paris.css'
 
 //Assets
-import riverImage from '../../../assets/river.png';
+import riverImage from '../../../assets/paris-river.jpg';
 import parisImage from '../../../assets/paris2.png';
 import mapImage from '../../../assets/cruiseMap.png';
 
@@ -34,20 +34,17 @@ class Paris extends Component {
           </h2>
           <ImageBox src={riverImage} caption='July 14-21, 2018, 8 Day River Cruise Paris-Paris Itinerary' alt='river' fontSize='1.7rem' noLink/>
           <p>
-            The long awaited, European River Cruise. Avalon Waterways, Paris to Normandy, 8 Day River Cruise from 
-            Paris to Paris. Departing Paris July 14, 2018 return date of July 21, 2018. Cost is $2,149 per person, 
-            (cruise cost only) for the base cabin. 
+            The long awaited, European River Cruise. Avalon Waterways, Paris to Normandy, 8 Day River Cruise 
+            from Paris to Paris. Departing Paris July 14, 2018 return date of July 21, 2018.    
           </p>
           <p>
-            Upgrades to Panorama and Royal Suites are available. This cost is $1,000 per person off of the 
-            brochure listed rate. $250 per person deposit must be made by April 4, 2017 to secure this rate. 
-            Deposit by this date, also gives you pre-paid gratuities, and 2 drink coupons per person. 
-            Insurance is available.
+            Upgrades to Panorama Suites are available. There are some promotions from Avalon that may be available to 
+            help reduce your cost.  The deposit is $250 per person.  By being a member of our group, you also 
+            receive pre-paid gratuities, and 2 drink coupons per person. Insurance is available.
           </p>
           <p>
             If you are a Globus Journey's member, you will receive an additional 5% off of the cabin cost. Watch 
-            here for additional information. At this discounted rate, we think the demand will be very high, don't 
-            miss out!  Contact us today for a detailed quote.
+            here for additional information.
           </p>
           <CallToAction title='Ready To See Paris?' buttons={buttons} exterior vertical/>
           <ImageBox src={parisImage} caption='Go for the Sights' alt='paris' fontSize='1.7rem' noLink/>

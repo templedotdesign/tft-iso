@@ -2,7 +2,7 @@ export default {
   amount: {
     attributes: {
       type: 'text',
-      placeholder: '1000'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Amount:',

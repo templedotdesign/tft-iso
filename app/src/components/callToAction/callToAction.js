@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 //Components
-import Row from '../../components/layout/row/row';
+import Column from '../../components/layout/column/column';
 
 //CSS
 import classes from './callToAction.css';
@@ -16,17 +16,22 @@ class CallToAction extends Component {
 
   render() {
     let buttons = [];
-    let style = {};
+    let style = {
+      width: this.props.width
+    };
     let justification = '';
     this.props.buttons.map(button => {
       if(this.props.exterior === true) {
-        return buttons.push(<a key={button.to} href={button.to} target='_blank' rel='noopener noreferrer'>{button.buttonTitle}</a>)
+        return buttons.push(<a style={{margin: '10px'}} key={button.to} href={button.to} target='_blank' rel='noopener noreferrer'>{button.buttonTitle}</a>)
+      } else if(this.props.email === true) {
+        return buttons.push(<a style={{margin: '10px'}} key={button.to} href={button.to}>{button.buttonTitle}</a>)
       } else {
-        return buttons.push(<a key={button.to} onClick={(event) => this.onClick(event, button.to)}>{button.buttonTitle}</a>)
+        return buttons.push(<a style={{margin: '10px'}} key={button.to} onClick={(event) => this.onClick(event, button.to)}>{button.buttonTitle}</a>)
       }
     })
     if(this.props.vertical) {
       style = {
+        ...style,
         flexDirection: 'column',
       }
       justification = 'space-around'; 
@@ -39,9 +44,9 @@ class CallToAction extends Component {
           <h2>{this.props.title}</h2>
           <p>{this.props.caption}</p>
         </div>
-        <Row justification={justification} alignment='center'>
+        <Column justification={justification} alignment='center'>
           {buttons}
-        </Row>
+        </Column>
       </div>
     );
   }

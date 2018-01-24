@@ -1,5 +1,6 @@
 //Core
 import React, { Component } from 'react';
+import { withRouter, NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 //Components
@@ -11,7 +12,7 @@ import Notification from '../notification/notification';
 import classes from './reservationForm.css';
 
 //Constants
-import { API_KEY, TERMS_ONE, TERMS_TWO } from '../../../constants/reservationForm/reservationForm';
+import { API_KEY, TERMS_ONE, TERMS_TWO, TERMS_THREE, TERMS_FOUR, TERMS_FIVE } from '../../../constants/reservationForm/reservationForm';
 import * as Config from '../../../config/index';
 
 class ReservationForm extends Component {
@@ -212,7 +213,7 @@ class ReservationForm extends Component {
         passengerConfig = `intlPassenger${i}Config`;
         passenger = {
           ...passenger, 
-          PassportExp: this.CheckForNullValue(this.formatDate(this.state.formConfig[passengerConfig].passportExp.value)),
+          PassportExp: this.CheckForNullValue(this.formatDate(this.state.formConfig[passengerConfig].passportExpiration.value)),
           PassportNum: this.CheckForNullValue(this.state.formConfig[passengerConfig].passportNum.value),
           PassportState: this.CheckForNullValue(this.state.formConfig[passengerConfig].passportState.value)
         };
@@ -385,7 +386,7 @@ class ReservationForm extends Component {
       console.log('Upload Successful');
       this.setState({...this.state, uploadSuccess: true});
       setTimeout(() => {
-        window.location.reload();
+        this.props.history.push('/');
       }, 2000);
     })
     .catch(err => {
@@ -403,7 +404,7 @@ class ReservationForm extends Component {
       );
     } else if(this.state.formConfig.headerConfig.travelType.value === 'International') {
       disclaimer = (
-        <p className={classes.disclaimer}>Passenger Name Must Match Name On Passport EXACTLY.  Passport 
+        <p className={classes.disclaimer}>Passenger Name Must Match Name On Passport BOOK EXACTLY.  Passport 
         Expiration Date Must Have 6 Months Validity Remaining After Travel Return Date.</p>
       );
     }
@@ -739,15 +740,20 @@ class ReservationForm extends Component {
             })}
           </div>
         </section>
-        <p style={{margin: '10px'}}>{TERMS_ONE}</p>
-        <br/>
-        <p style={{margin: '10px'}}>{TERMS_TWO}</p>
+        <p style={{margin: '10px', fontSize: '1rem'}}>{TERMS_ONE}</p>
+        <NavLink className={classes.terms} to='/terms' target='_blank' rel='noopener noreferrer'>Terms and Conditions</NavLink>
+        <p style={{margin: '10px', fontSize: '1rem'}}>{TERMS_TWO}</p>
+        <p style={{margin: '10px', fontSize: '1rem'}}>{TERMS_THREE}</p>
+        <p style={{margin: '10px', fontSize: '1rem'}}>{TERMS_FOUR}</p>
+        <p style={{margin: '10px', fontSize: '1rem'}}>{TERMS_FIVE}</p>
+
         <hr/>
         {notification}
         <button onClick={this.handleSubmit} disabled={!this.state.formIsValid}>Submit</button>
+        <p style={{textAlign: 'center', fontSize:'1.3rem'}}>Button will activate once form is valid.</p>
       </div>
     );
   }
 }
 
-export default ReservationForm;
+export default withRouter(ReservationForm);

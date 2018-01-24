@@ -4,7 +4,7 @@ export default {
   ccNumber: {
     attributes: {
       type: 'text',
-      placeholder: '1234-1234-1234-1234'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Credit Card Number:',
@@ -49,7 +49,7 @@ export default {
   ccv: {
     attributes: {
       type: 'text',
-      placeholder: '123'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'CCV:',
@@ -64,7 +64,7 @@ export default {
   ccName: {
     attributes: {
       type: 'text',
-      placeholder: 'John Q. Doe'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Name On Card:',

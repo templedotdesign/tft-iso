@@ -17,7 +17,7 @@ export default {
   street: {
     attributes: {
       type: 'text',
-      placeholder: '123 Main St.'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Street Address:',
@@ -32,7 +32,7 @@ export default {
   city: {
     attributes: {
       type: 'text',
-      placeholder: 'Columbus'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'City:',
@@ -47,7 +47,7 @@ export default {
   state: {
     attributes: {
       type: 'text',
-      placeholder: 'Ohio'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'State:',
@@ -62,7 +62,7 @@ export default {
   zip: {
     attributes: {
       type: 'text',
-      placeholder: '12345'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Zip Code:',
@@ -78,7 +78,7 @@ export default {
   email1: {
     attributes: {
       type: 'email',
-      placeholder: 'john@doe.com'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Email:',
@@ -94,7 +94,7 @@ export default {
   email2: {
     attributes: {
       type: 'email',
-      placeholder: 'john@doe.com'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Email 2:',
@@ -109,7 +109,7 @@ export default {
   phone1: {
     attributes: {
       type: 'text',
-      placeholder: '123-123-1234'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Home Phone:',
@@ -124,7 +124,7 @@ export default {
   phone2: {
     attributes: {
       type: 'text',
-      placeholder: '123-123-1234'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Cell Phone:',

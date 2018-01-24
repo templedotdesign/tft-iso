@@ -3,7 +3,7 @@ import React from 'react';
 
 //Components
 import Backdrop from './backdrop/backdrop';
-import Row from '../row/row';
+import Column from '../column/column';
 import NavLinks from '../navLinks/navLinks';
 import Wrapper from '../../layout/wrapper/wrapper';
 
@@ -25,9 +25,9 @@ const sideDrawer = (props) => {
           <h2>TONS OF FUN TRAVEL</h2>
           <p onClick={props.clicked}><i className="fa fa-times" aria-hidden="true"></i></p>
         </div>
-        <Row justification='space-around' alignment='center' height='90vh'>
+        <Column justification='space-around' alignment='center' height='80vh'>
           <NavLinks clicked={props.clicked}/>
-        </Row>
+        </Column>
       </div>
     </Wrapper>
   );

@@ -57,6 +57,15 @@
   cursor: not-allowed;
 }
 
+.terms {
+  margin-left: 30px;
+  color: #2376ec; 
+}
+
+.terms:hover {
+  text-decoration: underline;
+}
+
 @media(max-width:750px) {
   .reservationForm {
     width: 95%;

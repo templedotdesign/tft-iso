@@ -15,12 +15,12 @@ const footer = (props) => {
       <Row justification='space-between' alignment='center'>
         <Column justification='space-around' alignment='center'>
           <div className={classes.row}>
-            <a href=''><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
-            <a href=''><i className="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href=''><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href='https://www.facebook.com/tonsoffuntravel/' target='_blank' rel='noopener noreferrer'><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href='https://twitter.com/TonsofFunTravel' target='_blank' rel='noopener noreferrer'><i className="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href='https://www.instagram.com/tonsoffuntravel/' target='_blank' rel='noopener noreferrer'><i className="fa fa-instagram" aria-hidden="true"></i></a>
           </div>
-            <a href='mailto:temple@templedesignsolutions.com'>contact@tonsoffuntravel.net</a>        
             <p>Give Us A Call Today! 888-528-0396</p>
+            <a className={classes.terms} href='http://www.emailmeform.com/builder/form/3vZY2Ke2bfgz' target='_blank' rel='noopener noreferrer'>Contact Us</a>        
             <NavLink to='/terms' className={classes.terms}>Terms & Conditions</NavLink>
         </Column>
         <img src={props.logo} alt='logo'/>

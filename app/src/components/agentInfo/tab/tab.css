@@ -1,10 +1,11 @@
 .tab {
-  border-color: black;
+  border-color: #2376ec;
   border-width: 1px 1px 0 1px;
   border-style: solid;
   width: 100%;
   text-align: center;
   border-radius: 5px 5px 0 0;
+  color: #2376ec;
 }
 
 .tab p {
@@ -12,5 +13,5 @@
 }
 
 .bottomBorder {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #2376ec;
 }

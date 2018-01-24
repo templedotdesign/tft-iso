@@ -37,7 +37,7 @@ class Nashville extends Component {
             Tonk Row within a 2 mile radius of their location.  The hotel also offers free wi-fi and breakfast. 
           </p>
           <p>
-            Guests can spend Friday evening at their leisure.  On Saturday, they would have free time until 2:30 
+            Guests can spend Friday evening at their leisure.  On Saturday, there will be free time until 2:30 
             p.m. when we will meet our bus for the transfer to the Grand Ole Opry Backstage Tour at 3:30 p.m.  At 
             4:45 p.m. we have a group dinner reservation at Opry Backstage Grill where the waitstaff perform 
             musical numbers while serving  you.  We then need to be in our seats at the Grand Ole Opry by 6:30 

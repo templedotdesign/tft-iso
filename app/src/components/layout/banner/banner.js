@@ -8,12 +8,12 @@ const banner = (props) => {
   let style = {
     background: `url(${props.src})`,
     backgroundSize: 'cover',
-    backgroundPosition: props.position,
+    backgroundPosition: props.position || 'center',
     display: 'flex',
     alignItems: props.alignment,
     justifyContent: 'center',
     color: 'white',
-    height: '80vh'
+    height: '80vh',
   }
   return (
     <div style={style}>

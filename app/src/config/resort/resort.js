@@ -4,7 +4,7 @@ export default {
   resort: {
     attributes: {
       type: 'text',
-      placeholder: 'Sandals ochi'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Perferred Resort:',

@@ -1,7 +1,7 @@
 export default {
   requests: {
     attributes: {
-      cols: '40',
+      cols: '30',
       rows: '10'
     },
     elementType: 'textarea',
@@ -32,7 +32,7 @@ export default {
   signature: {
     attributes: {
       type: 'text',
-      placeholder: 'John Q. Doe'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Electronic Signature:',

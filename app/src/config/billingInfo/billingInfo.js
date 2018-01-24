@@ -2,13 +2,13 @@ export default {
   billingCountry: {
     attributes: {
       type: 'text',
-      placeholder: 'USA'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Billing Country:',
     options: [],
     touched: false,
-    value: '',
+    value: 'USA',
     validation: {
       required: true
     },
@@ -17,7 +17,7 @@ export default {
   billingAddress1: {
     attributes: {
       type: 'text',
-      placeholder: '123 Main St.'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Billing Address:',
@@ -32,7 +32,7 @@ export default {
   billingAddress2: {
     attributes: {
       type: 'text',
-      placeholder: '3B'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Suite / Apt. #:',
@@ -47,7 +47,7 @@ export default {
   billingCity: {
     attributes: {
       type: 'text',
-      placeholder: 'Columbus'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Billing City:',
@@ -62,7 +62,7 @@ export default {
   billingState: {
     attributes: {
       type: 'text',
-      placeholder: 'Ohio'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Billing State:',
@@ -77,7 +77,7 @@ export default {
   billingZip: {
     attributes: {
       type: 'text',
-      placeholder: '12345'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Billing Zip Code:',

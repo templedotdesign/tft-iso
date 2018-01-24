@@ -44,7 +44,7 @@ export default {
   departureAirport: {
     attributes: {
       type: 'text',
-      placeholder: 'Columbus'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Departure Airport:',
@@ -59,7 +59,7 @@ export default {
   destinationAirport: {
     attributes: {
       type: 'text',
-      placeholder: 'Jamaica'
+      placeholder: ''
     },
     elementType: 'input',
     label: 'Destination Airport:',

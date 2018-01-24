@@ -7,6 +7,8 @@ import AgentInfo from '../../components/agentInfo/agentInfo';
 import { Background, QuoteWindow } from '../../components/quoteWindow/quoteWindow';
 import Banner from '../../components/layout/banner/banner';
 import CallToAction from '../../components/callToAction/callToAction';
+import Column from '../../components/layout/column/column';
+import Heading from '../../components/layout/heading/heading';
 import ImageBox from '../../components/imageBox/imageBox';
 import Row from '../../components/layout/row/row';
 import Wrapper from '../../components/layout/wrapper/wrapper';
@@ -26,17 +28,23 @@ class Home extends Component {
   
   render() {
     const buttons = [
-      { buttonTitle: 'Contact Us', to: 'http://www.emailmeform.com/builder/form/3vZY2Ke2bfgz' }
+      { buttonTitle: 'management@tonsoffuntravel.net', to: 'mailto:management@tonsoffuntravel.net' },
+      { buttonTitle: 'stephanie@tonsoffuntravel.net', to: 'mailto:stephanie@tonsoffuntravel.net' },
+      { buttonTitle: 'bob@tonsoffuntravel.net', to: 'mailto:bob@tonsoffuntravel.net' }
     ];
     return (
       <Wrapper>
         <Banner heading="Let Us Do All The Work And You'll Have Tons Of Fun On Your Next Trip!" src={worldImage} alignment='flex-end'/>
         <div style={{backgroundColor: 'white'}}>
+          <Heading heading='Welcome To Tons Of Fun Travel!'/>
           <Row justification='space-around' alignment='center'>
-            <Avatar src={bobStephImage} alt='bob and steph'/>
+            <Column justification='space-around' alignment='center'>
+              <Avatar src={bobStephImage} alt='bob and steph'/>
+              <CallToAction title="Let's Connect!" buttons={buttons} width='90%' email vertical/>
+            </Column>
             <AgentInfo currentAgent='owners'/>
           </Row>
-          <Row justification='space-between' alignment='center'>
+          <Row justification='space-around' alignment='center'>
             <ImageBox src={familyImage} buttonTitle='Family Travel' caption='Make Some Memories.' to='/family-travel'/>
             <ImageBox src={romanceImage} buttonTitle='Romance Travel' caption='Feel The Love!' to='http://twoheartsonetrip.com/' exterior/>
             <ImageBox src={groupImage} buttonTitle='Group Travel' caption='See The World With Us.' to='/group-travel'/>
@@ -44,9 +52,6 @@ class Home extends Component {
         </div>
         <QuoteWindow quote="We travel not to escape life, but for life not to escape us." author='Anonymous'/>
         <Background src={backgroundImage} alt="mountain pier"/>        
-        <div style={{padding: '100px 0', backgroundColor: 'white'}}>
-          <CallToAction title="Let's Connect!" buttons={buttons} exterior vertical/>
-        </div>
       </Wrapper>
     );
   }

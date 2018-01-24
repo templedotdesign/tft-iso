@@ -129,18 +129,32 @@ export const CABIN_TYPES = [
 
 export const API_KEY = '...';
 
-export const TERMS_ONE = `By submitting, you certify that you are the cardholder and are authorizing the travel agency or its chosen 
-Tour Operator/Supplier/Cruise Line to charge the listed amount to the credit card. You certify that you have verified that all 
-information contained in the confirmation you received is accurate. You also certify you have read the Terms and Conditions found 
-at https://www.tonsoffuntravel.net/terms--conditions.html on Resources page and the appropriate Travel Protection Plan details. 
-Cancellation penalties may apply. Insurance is not refundable.  You agree that your name as listed matches exactly to the  
-appropriate identification that will be used for travel, be it a passport or driver license.   If your travel requires a passport, you 
-are aware that it must have 6 months validity remaining after the return date of your trip.  If it does not have the 6 months validity, 
-the airline may deny boarding.  This charge will be manually applied by the agency to your reservation.  If there are any issues, an agent 
-will get back to you.   Please note that you may not see a charge from the travel agency on your credit card statement; the charge will 
-come from our supplier and/or the airline directly. Payment may take 3-5 business days to fully process and be reflected on your statement.`
+export const TERMS_ONE = `By submitting this form, you certify that you are the cardholder and are authorizing 
+the travel agency or its chosen Tour Operator/Supplier/Cruise Line to charge the listed amount to the credit 
+card. You certify that you have verified that all information contained in the confirmation you completed is 
+accurate. You also certify you have read the Terms and Conditions found here` 
 
-export const TERMS_TWO = `I authorize the travel agency to use the above information to charge my credit card the stated amount.  I do have 
-appropriate travel identification and if passports are required we verify that passports are valid for 6 months following our return travel 
-date.  I verify that our names listed here match our identification EXACTLY or change fees may be assessed to make such corrections 
-as needed.  Completion and Signing of this form signifies acceptance.`
+export const TERMS_TWO = `You also certify you have read the appropriate Travel Protection Plan details. Cancellation penalties may apply. Insurance premium is not refundable. You 
+confirm that your name as listed matches exactly to the appropriate identification that will be used for travel, 
+be it a passport or driver license, understanding that if they do not match, change fees will apply to make 
+the correction with the airlines.  If your travel requires a passport, you are aware that it must have 6 
+months validity remaining after the return date of your trip. If it does not have the 6 months validity, the 
+airline may deny boarding. You understand that a passport BOOK is required for any type of international 
+travel that includes air.  It is also the client’s responsibility to check with the appropriate authorities, if 
+they have any prior criminal convictions which would result in them being denied boarding or leaving the United States.
+`
+
+export const TERMS_THREE = `Completing your credit card information will generate a notification authorizing 
+the agency to manually apply said payment to your reservation. If there are any issues processing the 
+payment/reservation, an agent will get back to you. Please note that you may not see a charge from the travel 
+agency on your credit card statement; the charge will come from our supplier and/or the airline directly. 
+Payment may take 3-5 business days to fully process and be reflected on your statement.`
+
+export const TERMS_FOUR = `You understand that any refunds associated with cancellation may be cash refunds 
+or future travel credit based on the resort/vendor, the cancellation reason, and the policy of the insurance 
+company.  You understand that without travel protection, all my investment is at risk.  You understand that 
+your US medical insurance policy may not cover you outside the United States.`
+
+export const TERMS_FIVE = `Completion and Electronically Signing of this form signifies acceptance of the 
+terms listed here as well as the complete list on our website. Also by signing, you certify that all parties 
+listed on this form  do have appropriate identification for travel.`

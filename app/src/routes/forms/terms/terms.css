@@ -1,0 +1,13 @@
+.terms a {
+  color: #2376ec;
+  cursor: pointer;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.red {
+  color: red;
+}
+

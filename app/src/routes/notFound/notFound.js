@@ -1,13 +1,19 @@
 //Core 
-import React from 'react';
+import React, { Component } from 'react';
 
 //Components
 import Heading from '../../components/layout/heading/heading';
 
-const notFound = () => {
-  return (
-    <Heading heading='404 - Page Not Found'/>
-  )
+class NotFound extends Component {
+  componentDidMount() {
+    window.scroll(0,0);
+  }
+  
+  render() {
+    return (
+      <Heading heading='404 - Page Not Found'/>
+    );
+  }
 }
 
-export default notFound;
+export default NotFound;
