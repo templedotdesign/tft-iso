@@ -391,6 +391,13 @@ class ReservationForm extends Component {
     })
     .catch(err => {
       console.log(err);
+      axios.post('https://tonsoffuntravel-e3b94.firebaseio.com/errors.json', {data: err.response.data, firstName: reservation.Passengers[0].FirstName, lastName: reservation.Passengers[0].LastName, agent: reservation.PrimaryAgent})
+      .then(res => {
+        console.log('Error logged to firebase')
+      })
+      .catch(err => {
+        console.log(err)
+      })
       this.setState({...this.state, uploadFailure: true});
     });
   };

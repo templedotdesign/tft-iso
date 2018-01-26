@@ -374,7 +374,7 @@ export const tammy = {
   tab1: {
     title: 'Bio',
     content: [
-      "Hi! My name is Tammy. I recently became an Independent Agent with Tons of Fun Travel. After having spent many years planning trips for family and friends as a hobby I decided to turn that joy of finding the ideal get away into something I can share with others. I love to plan unforgettable vacations, whether it's a domestic trip or an all inclusive get away.",
+      "Hi! My name is Tammy. I recently became an Independent Agent with Tons of Fun Travel. After having spent many years planning trips for family and friends as a hobby I decided to turn that joy of finding the ideal getaway into something I can share with others. I love to plan unforgettable vacations, whether it's a domestic trip or an all inclusive get away.",
       "In other areas of my life I have had the privilege to work with students that have multiple disabilities as a Para Professional for the last 18 years. I also assist with art classes for Ohio Chick and I enjoy hiking, rafting, canoeing and camping with my husband of 35 years. I'm an avid star gazer and our last venture took us just north of Nashville to view the Total Eclipse. Amazing!",
       'I would be happy to arrange an All-Inclusive, Beach, Romantic or Family Vacation for you. Call me and let me help plan your next adventure. Thank You.',
       'Wander Often. Wander Always.'
@@ -383,7 +383,8 @@ export const tammy = {
   tab2: {
     title: 'Certifications',
     content: [
-      'Disney College of Knowledge Graduate'
+      'Disney College of Knowledge Graduate',
+      'Jamaica Travel Specialist'
     ]
   },
   tab3: {
