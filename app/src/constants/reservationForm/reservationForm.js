@@ -127,6 +127,84 @@ export const CABIN_TYPES = [
   { value: 'Suite', name: 'Suite' }
 ];
 
+export const MONTHS = [
+  { value: null, name: 'Select' },
+  { value: '01', name: '01' },
+  { value: '02', name: '02' },
+  { value: '03', name: '03' },
+  { value: '04', name: '04' },
+  { value: '05', name: '05' },
+  { value: '06', name: '06' },
+  { value: '07', name: '07' },
+  { value: '08', name: '08' },
+  { value: '09', name: '09' },
+  { value: '10', name: '10' },
+  { value: '11', name: '11' },
+  { value: '12', name: '12' },
+];
+
+export const DAYS = [
+  { value: null, name: 'Select' },
+  { value: '01', name: '01' },
+  { value: '02', name: '02' },
+  { value: '03', name: '03' },
+  { value: '04', name: '04' },
+  { value: '05', name: '05' },
+  { value: '06', name: '06' },
+  { value: '07', name: '07' },
+  { value: '08', name: '08' },
+  { value: '09', name: '09' },
+  { value: '10', name: '10' },
+  { value: '11', name: '11' },
+  { value: '12', name: '12' },
+  { value: '13', name: '13' },
+  { value: '14', name: '14' },
+  { value: '15', name: '15' },
+  { value: '16', name: '16' },
+  { value: '17', name: '17' },
+  { value: '18', name: '18' },
+  { value: '19', name: '19' },
+  { value: '20', name: '20' },
+  { value: '21', name: '21' },
+  { value: '22', name: '22' },
+  { value: '23', name: '23' },
+  { value: '24', name: '24' },
+  { value: '25', name: '25' },
+  { value: '26', name: '26' },
+  { value: '27', name: '27' },
+  { value: '28', name: '28' },
+  { value: '29', name: '29' },
+  { value: '30', name: '30' },
+  { value: '31', name: '31' },
+];
+
+export const YEARS = () => {
+  let years = [
+    { value: null, name: 'Select' }
+  ];
+  for(let i = 2018; i >= 1918; i--) {
+    years.push({value: i.toString(), name: i.toString()})
+  }
+  return years;
+};
+
+export const EXP_YEARS = [
+  { value: null, name: 'Select' },
+  { value: '18', name: '2018' },
+  { value: '19', name: '2019' },
+  { value: '20', name: '2020' },
+  { value: '21', name: '2021' },
+  { value: '22', name: '2022' },
+  { value: '23', name: '2023' },
+  { value: '24', name: '2024' },
+  { value: '25', name: '2025' },
+  { value: '26', name: '2026' },
+  { value: '27', name: '2027' },
+  { value: '28', name: '2028' },
+  { value: '29', name: '2029' },
+  { value: '30', name: '2030' },
+];
+
 export const API_KEY = '...';
 
 export const TERMS_ONE = `By submitting this form, you certify that you are the cardholder and are authorizing 

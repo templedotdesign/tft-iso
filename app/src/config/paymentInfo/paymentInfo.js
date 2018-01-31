@@ -17,13 +17,10 @@ export default {
     valid: false
   },
   ccExpirationMonth: {
-    attributes: {
-      type: 'text',
-      placeholder: 'MM'
-    },
-    elementType: 'input',
+    attributes: {},
+    elementType: 'select',
     label: 'Expiration Month:',
-    options: [],
+    options: Constants.MONTHS,
     touched: false,
     value: '',
     validation: {
@@ -32,13 +29,10 @@ export default {
     valid: false
   },
   ccExpirationYear: {
-    attributes: {
-      type: 'text',
-      placeholder: 'YY'
-    },
-    elementType: 'input',
+    attributes: {},
+    elementType: 'select',
     label: 'Expiration Year:',
-    options: [],
+    options: Constants.EXP_YEARS,
     touched: false,
     value: '',
     validation: {
