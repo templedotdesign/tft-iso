@@ -27,5 +27,17 @@ export default {
       required: true
     },
     valid: false
+  },
+  airfare: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Do You Need Airfare?',
+    options: Constants.YES_NO_AIRFARE,
+    touched: false,
+    value: '',
+    validation: {
+      required: false
+    },
+    valid: false
   }
 }

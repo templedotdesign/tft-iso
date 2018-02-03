@@ -29,9 +29,6 @@ import Terms from '../../routes/forms/terms/terms';
 //Assets
 import logo from '../../assets/tftlogo.png';
 
-//Constants
-import { YEARS } from '../../constants/reservationForm/reservationForm';
-
 const app = () => {
   return (
     <BrowserRouter>

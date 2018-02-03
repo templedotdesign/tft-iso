@@ -52,11 +52,11 @@ class ReservationForm extends Component {
     },
     uploadSuccess: false,
     uploadFailure: false,
-    formIsValid: false
+    invalidFields: []
   }
 
   componentDidMount() {
-    let agentsArray = [{value: 'null', name: 'Select'}];
+    let agentsArray = [{value: '', name: 'Select'}];
     const getAgentsURL = `https://www.vacationcrm.com/travelmvc/api/Service/GetAgents?ApiKey=${API_KEY}`;
     axios.get(getAgentsURL)
     .then(res => {
@@ -90,30 +90,20 @@ class ReservationForm extends Component {
     
     formElement.value = event.target.value;
 
-    if(formElement.label === 'Departure Date:') {
-      let returnDate = {...sectionState['returnDate']};
-      returnDate.value = formElement.value;
-      sectionState['returnDate'] = returnDate;
-    }
-
     formElement.valid = this.ValidateField(formElement.value, formElement.validation);
-    const formValidity = this.ValidateForm();    
     sectionState[id] = formElement;
     formState[section] = sectionState;
-    this.setState({...this.state, formConfig: formState, formIsValid: formValidity});
-
-    
+    this.setState({...this.state, formConfig: formState});
   };
 
-  formatDate = (date) => {
-    const dateArray = date.split('-');
-    let formattedArray = [];
-    formattedArray.push(dateArray[1]);
-    formattedArray.push(dateArray[2]);
-    formattedArray.push(dateArray[0]);
-    return formattedArray.join('/');
+  formatDateFromSelects = (month, day, year) => {
+    if(month === '' || day === '' || year === '') {
+      return ''
+    } else {
+      return month + '/' + day + '/' + year
+    }
   };
-
+  
   ValidateField = (value, validation) => {
     let isValid = true;
     if(validation.required === false) {
@@ -123,7 +113,6 @@ class ReservationForm extends Component {
           if(value.trim().length < 5  && isValid) {
             isValid = false;
           }
-
           if(value.trim().length > 10 && isValid) {
             isValid = false;
           }
@@ -135,56 +124,117 @@ class ReservationForm extends Component {
         if(value.trim() === '' && isValid) {
           isValid = false;
         }
+
+        if(value === 0) {
+          isValid = false;
+        }
+
         return isValid;
     }
   };
 
-  ValidateForm = () => {
-    let isValid = true;
-    let objectToValidate = {
-      primaryAgent: this.state.formConfig.headerConfig.primaryAgent.value,
-      passengerCountry: this.state.formConfig.contactConfig.country.value,
-      passengerStreet: this.state.formConfig.contactConfig.street.value,
-      passengerCity: this.state.formConfig.contactConfig.city.value,
-      passengerState: this.state.formConfig.contactConfig.state.value,
-      passengerZip: this.state.formConfig.contactConfig.zip.value,
-      passengerEmail: this.state.formConfig.contactConfig.email1.value,
-      departureDate: this.formatDate(this.state.formConfig.tripInfoConfig.departureDate.value),
-      returnDate: this.formatDate(this.state.formConfig.tripInfoConfig.returnDate.value),
-      insurance: this.state.formConfig.tripInfoConfig.insurance.value,
-      electronicSignature: this.state.formConfig.additionalInfoConfig.signature.value
-    };
-
-    if(this.state.formConfig.headerConfig.travelType.value === 'Domestic') {
-      objectToValidate = {
-        ...objectToValidate, 
-        passengerFirstName: this.state.formConfig.domPassenger1Config.firstName.value,
-        passengerLastName: this.state.formConfig.domPassenger1Config.lastName.value,
-        passengerDOB: this.formatDate(this.state.formConfig.domPassenger1Config.dob.value),
-        passengerGender: this.state.formConfig.domPassenger1Config.gender.value
-      };
-    } else if(this.state.formConfig.headerConfig.travelType.value === 'International') {
-      objectToValidate = {
-        ...objectToValidate, 
-        passengerFirstName: this.state.formConfig.intlPassenger1Config.firstName.value,
-        passengerLastName: this.state.formConfig.intlPassenger1Config.lastName.value,
-        passengerDOB: this.formatDate(this.state.formConfig.intlPassenger1Config.dob.value),
-        passengerGender: this.state.formConfig.intlPassenger1Config.gender.value
-      };
-    }
+  validateForm = () => {
+    let invalidFields = [];
     
-    if(this.state.formConfig.tripTypeConfig.tripType.value === 'Lodging') {
-      objectToValidate = {...objectToValidate, roomType: this.state.formConfig.resortConfig.roomType.value};
-    } else if(this.state.formConfig.tripTypeConfig.tripType.value === 'Cruise') {
-      objectToValidate = {...objectToValidate, roomType: this.state.formConfig.cruiseConfig.roomType.value};
-    }
-
-    for(const key in objectToValidate) {
-      if(objectToValidate[key] === '' || objectToValidate[key] === '//') {
-        isValid = false;
+    for(let key in this.state.formConfig.headerConfig) {
+      if (this.state.formConfig.headerConfig[key].validation.required === false) {
+        continue;
+      }
+      if(this.state.formConfig.headerConfig[key].valid === false) {
+        invalidFields.push(`Passenger Info - ${this.state.formConfig.headerConfig[key].label}`)
       }
     }
-    return isValid;
+
+    if(this.state.formConfig.headerConfig.numOfPassengers.value > 0 && this.state.formConfig.headerConfig.travelType.value !== '') {
+      let section = '';
+      for(let i = 1; i <= this.state.formConfig.headerConfig.numOfPassengers.value; i++) {
+        if(this.state.formConfig.headerConfig.travelType.value === 'Domestic') {
+          section = this.state.formConfig[`domPassenger${i}Config`];
+        } else if(this.state.formConfig.headerConfig.travelType.value === 'International') {
+          section = this.state.formConfig[`intlPassenger${i}Config`];
+        }
+        for(const key in section) {
+          if (section[key].validation.required === false) {
+            continue;
+          }
+          if(section[key].valid === false) {
+            invalidFields.push(`Passenger ${i} Info - ${section[key].label}`)
+          }
+        }
+      }
+    }
+
+    for(let key in this.state.formConfig.contactConfig) {
+      if (this.state.formConfig.contactConfig[key].validation.required === false) {
+        continue;
+      }
+      if(this.state.formConfig.contactConfig[key].valid === false) {
+        invalidFields.push(`Contact Info - ${this.state.formConfig.contactConfig[key].label}`)
+      }
+    }
+
+    if(this.state.formConfig.tripTypeConfig.tripType.valid === false) {
+      invalidFields.push(`Trip Info - ${this.state.formConfig.tripTypeConfig.tripType.label}`)
+    } else if(this.state.formConfig.tripTypeConfig.tripType.value === 'Airfare') {
+    } else {
+      let resortSection = null
+      if(this.state.formConfig.tripTypeConfig.tripType.value === 'Cruise') {
+        resortSection = this.state.formConfig.cruiseConfig;
+      } else if(this.state.formConfig.tripTypeConfig.tripType.value === 'Lodging') {
+        resortSection = this.state.formConfig.resortConfig;
+      }
+      for(const key in resortSection) {
+        if(resortSection[key].validation.required === false) {
+          continue;
+        } else {
+          if(resortSection[key].valid === false) {
+            invalidFields.push(`Trip Info - ${resortSection[key].label}`)
+          }
+        }
+      }
+    }
+
+    for(let key in this.state.formConfig.tripInfoConfig) {
+      if (this.state.formConfig.tripInfoConfig[key].validation.required === false) {
+        continue;
+      }
+      if(this.state.formConfig.tripInfoConfig[key].valid === false) {
+        invalidFields.push(`Trip Info - ${this.state.formConfig.tripInfoConfig[key].label}`)
+      }
+    }
+
+    if(this.state.formConfig.paymentTypeConfig.paymentType.value !== '') {
+      for(let key in this.state.formConfig.paymentInfoConfig) {
+        if (this.state.formConfig.paymentInfoConfig[key].validation.required === false) {
+          continue;
+        }
+        if(this.state.formConfig.paymentInfoConfig[key].valid === false) {
+          invalidFields.push(`Payment Info - ${this.state.formConfig.paymentInfoConfig[key].label}`)
+        }
+      }
+    }
+
+    if(this.state.formConfig.paymentInfoConfig.billingAddress.value === 'No') {
+      for(let key in this.state.formConfig.billingInfoConfig) {
+        if (this.state.formConfig.billingInfoConfig[key].validation.required === false) {
+          continue;
+        }
+        if(this.state.formConfig.billingInfoConfig[key].valid === false) {
+          invalidFields.push(`Billing Info - ${this.state.formConfig.billingInfoConfig[key].label}`)
+        }
+      }
+    }
+
+    for(let key in this.state.formConfig.additionalInfoConfig) {
+      if (this.state.formConfig.additionalInfoConfig[key].validation.required === false) {
+        continue;
+      }
+      if(this.state.formConfig.additionalInfoConfig[key].valid === false) {
+        invalidFields.push(`Additional Info - ${this.state.formConfig.additionalInfoConfig[key].label}`)
+      }
+    }
+
+    return invalidFields; 
   }
 
   CheckForNullValue = (value) => {
@@ -213,7 +263,7 @@ class ReservationForm extends Component {
         passengerConfig = `intlPassenger${i}Config`;
         passenger = {
           ...passenger, 
-          PassportExp: this.CheckForNullValue(this.formatDate(this.state.formConfig[passengerConfig].passportExpiration.value)),
+          PassportExp: this.CheckForNullValue(this.formatDateFromSelects(this.state.formConfig[passengerConfig].expMonth.value, this.state.formConfig[passengerConfig].expDay.value, this.state.formConfig[passengerConfig].expYear.value)),
           PassportNum: this.CheckForNullValue(this.state.formConfig[passengerConfig].passportNum.value),
           PassportState: this.CheckForNullValue(this.state.formConfig[passengerConfig].passportState.value)
         };
@@ -222,7 +272,7 @@ class ReservationForm extends Component {
       passenger = {
         ...passenger, 
         Anniversary: null,
-        DOB: this.formatDate(this.state.formConfig[passengerConfig].dob.value),
+        DOB: this.formatDateFromSelects(this.state.formConfig[passengerConfig].birthMonth.value, this.state.formConfig[passengerConfig].birthDay.value, this.state.formConfig[passengerConfig].birthYear.value),
         DepartureAirport: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.departureAirport.value),
         FirstName: this.state.formConfig[passengerConfig].firstName.value,
         FreqAirline: null,
@@ -288,7 +338,7 @@ class ReservationForm extends Component {
       payment = {
         ...payment,
         CCAddress: this.state.formConfig.billingInfoConfig.billingAddress1.value,
-        CCAddress2: this.CheckForNullValue(this.state.formConfig.billingInfoConfig.billingAddress2.value),
+        CCAddress2: null,
         CCCity: this.state.formConfig.billingInfoConfig.billingCity.value,
         CCCountry: this.state.formConfig.billingInfoConfig.billingCountry.value,
         CCState: this.state.formConfig.billingInfoConfig.billingState.value,
@@ -326,80 +376,92 @@ class ReservationForm extends Component {
   };
 
   handleSubmit = (event) => {
-    event.preventDefault();    
-    let resortConfig = null;
-    if(this.state.formConfig.tripTypeConfig.tripType.value === 'Lodging') {
-      resortConfig = 'resortConfig';
-    } else if(this.state.formConfig.tripTypeConfig.tripType.value === 'Cruise') {
-      resortConfig = 'cruiseConfig';
-    }
-    let reminderText = '';
-    if(this.state.formConfig.headerConfig.travelType.value === 'International') {
-      for(let i = 1; i <= this.state.formConfig.headerConfig.numOfPassengers.value; i++) {
-        const passenger = `intlPassenger${i}Config`;
-        if(this.state.formConfig[passenger].passportNum.value === '') {
-          reminderText = "New Web Reservation Request - Passports Not Collected";
+    event.preventDefault();
+    const invalidFields = this.validateForm();
+    this.setState({...this.state, invalidFields: invalidFields});
+      
+    if(invalidFields.length === 0) {
+      let resortConfig = null;
+      if(this.state.formConfig.tripTypeConfig.tripType.value === 'Lodging' || this.state.formConfig.tripTypeConfig.tripType.value === 'Airfare') {
+        resortConfig = 'resortConfig';
+      } else if(this.state.formConfig.tripTypeConfig.tripType.value === 'Cruise') {
+        resortConfig = 'cruiseConfig';
+      }
+      let reminderText = '';
+      if(this.state.formConfig.headerConfig.travelType.value === 'International') {
+        for(let i = 1; i <= this.state.formConfig.headerConfig.numOfPassengers.value; i++) {
+          const passenger = `intlPassenger${i}Config`;
+          if(this.state.formConfig[passenger].passportNum.value === '') {
+            reminderText = "New Web Reservation Request - Passports Not Collected";
+          }
         }
       }
-    }
-    const signature = `Electronic Signature: ${this.state.formConfig.additionalInfoConfig.signature.value}`;
-    const reservation = {
-      Airfare: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.airfare.value),
-      ApiKey: API_KEY,
-      Bedding: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.beddingType.value),
-      CustomField1: signature,
-      CustomField2: null,
-      CustomField3: null,
-      CustomField4: null,
-      CustomField5: null,
-      CustomField6: null,
-      CustomField7: null,
-      CustomField8: null,
-      CustomField9: null,
-      CustomField10: null,
-      DepartureDate: this.formatDate(this.state.formConfig.tripInfoConfig.departureDate.value),
-      DepartureLocation: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.departureAirport.value),
-      DestinationLocation: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.destinationAirport.value),
-      Insurance: this.state.formConfig.tripInfoConfig.insurance.value,
-      Military: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.military.value),
-      OtherQuestion: this.CheckForNullValue(this.state.formConfig.additionalInfoConfig.questions.value),
-      Passengers: this.CreatePassengers(),
-      Payments: this.CreatePayments(),
-      PrimaryAgent: this.state.formConfig.headerConfig.primaryAgent.value,
-      ReminderText: this.CheckForNullValue(reminderText),
-      Resort: this.CheckForNullValue(this.state.formConfig[resortConfig].resort.value),
-      ReturnDate: this.formatDate(this.state.formConfig.tripInfoConfig.returnDate.value),
-      RoomType: this.state.formConfig[resortConfig].roomType.value,
-      SpecialRequest: this.CheckForNullValue(this.state.formConfig.additionalInfoConfig.requests.value),
-      VacationType: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.vacationType.value),
-      pdf_id: null,
-      udf_reg1: null,
-      udf_reg2: null,
-      udf_reg3: null,
-      udf_reg4: null,
-      udf_reg5: null
-    };
-    const postRequestURL = `https://www.vacationcrm.com/travelmvc/api/Service/PostRequest?ApiKey=${API_KEY}`;    
-    axios.post(postRequestURL, reservation)
-    .then(res => {
-      console.log(res.data);
-      console.log('Upload Successful');
-      this.setState({...this.state, uploadSuccess: true});
-      setTimeout(() => {
-        this.props.history.push('/');
-      }, 2000);
-    })
-    .catch(err => {
-      console.log(err);
-      axios.post('https://tonsoffuntravel-e3b94.firebaseio.com/errors.json', {data: err.response.data, firstName: reservation.Passengers[0].FirstName, lastName: reservation.Passengers[0].LastName, agent: reservation.PrimaryAgent})
+
+      let airfare = null;
+      if(this.state.formConfig.tripTypeConfig.tripType.value === 'Airfare') {
+        airfare = 'yes'
+      } else {
+        airfare = this.CheckForNullValue(this.state.formConfig[resortConfig].airfare.value)
+      }
+      const signature = `Electronic Signature: ${this.state.formConfig.additionalInfoConfig.signature.value}`;
+      const reservation = {
+        Airfare: airfare,
+        ApiKey: API_KEY,
+        Bedding: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.beddingType.value),
+        CustomField1: signature,
+        CustomField2: `Primary Phone Type: ${this.state.formConfig.contactConfig.phoneType.value}`,
+        CustomField3: null,
+        CustomField4: null,
+        CustomField5: null,
+        CustomField6: null,
+        CustomField7: null,
+        CustomField8: null,
+        CustomField9: null,
+        CustomField10: null,
+        DepartureDate: this.formatDateFromSelects(this.state.formConfig.tripInfoConfig.departureMonth.value, this.state.formConfig.tripInfoConfig.departureDay.value, this.state.formConfig.tripInfoConfig.departureYear.value),
+        DepartureLocation: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.departureAirport.value),
+        DestinationLocation: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.destinationAirport.value),
+        Insurance: this.state.formConfig.tripInfoConfig.insurance.value,
+        Military: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.military.value),
+        OtherQuestion: this.CheckForNullValue(this.state.formConfig.additionalInfoConfig.questions.value),
+        Passengers: this.CreatePassengers(),
+        Payments: this.CreatePayments(),
+        PrimaryAgent: this.state.formConfig.headerConfig.primaryAgent.value,
+        ReminderText: this.CheckForNullValue(reminderText),
+        Resort: this.CheckForNullValue(this.state.formConfig[resortConfig].resort.value) || null,
+        ReturnDate: this.formatDateFromSelects(this.state.formConfig.tripInfoConfig.returnMonth.value, this.state.formConfig.tripInfoConfig.returnDay.value, this.state.formConfig.tripInfoConfig.returnYear.value),
+        RoomType: this.state.formConfig[resortConfig].roomType.value,
+        SpecialRequest: this.CheckForNullValue(this.state.formConfig.additionalInfoConfig.requests.value),
+        VacationType: this.CheckForNullValue(this.state.formConfig.tripInfoConfig.vacationType.value),
+        pdf_id: null,
+        udf_reg1: null,
+        udf_reg2: null,
+        udf_reg3: null,
+        udf_reg4: null,
+        udf_reg5: null
+      };
+      const postRequestURL = `https://www.vacationcrm.com/travelmvc/api/Service/PostRequest?ApiKey=${API_KEY}`;    
+      axios.post(postRequestURL, reservation)
       .then(res => {
-        console.log('Error logged to firebase')
+        console.log(res.data);
+        console.log('Upload Successful');
+        this.setState({...this.state, uploadSuccess: true});
+        setTimeout(() => {
+          this.props.history.push('/');
+        }, 2000);
       })
       .catch(err => {
-        console.log(err)
-      })
-      this.setState({...this.state, uploadFailure: true});
-    });
+        console.log(err);
+        axios.post('https://tonsoffuntravel-e3b94.firebaseio.com/errors.json', {data: err, firstName: reservation.Passengers[0].FirstName, lastName: reservation.Passengers[0].LastName, agent: reservation.PrimaryAgent})
+        .then(res => {
+          console.log('Error logged to firebase')
+        })
+        .catch(err => {
+          console.log(err)
+        })
+        this.setState({...this.state, uploadFailure: true});
+      });
+    }
   };
 
   render() {
@@ -590,6 +652,22 @@ class ReservationForm extends Component {
         <Notification text="Your data failed to upload"/>
       );
     }
+
+    let invalidNotification = null;
+    if(this.state.invalidFields.length > 0) {
+      invalidNotification = (
+        <div style={{color: 'red', textAlign: 'center'}}>
+          <p>The following required fields are invalid</p>
+          <ul style={{listStyleType: 'none'}}>
+            {this.state.invalidFields.map((field, index) => {
+              return (
+                <li key={index}>{field}</li>
+              )
+            })}
+          </ul>
+        </div>
+      );
+    }
     
     return (
       <div className={classes.reservationForm}>
@@ -756,8 +834,8 @@ class ReservationForm extends Component {
 
         <hr/>
         {notification}
-        <button onClick={this.handleSubmit} disabled={!this.state.formIsValid}>Submit</button>
-        <p style={{textAlign: 'center', fontSize:'1.3rem'}}>Button will activate once form is valid.</p>
+        {invalidNotification}
+        <button onClick={this.handleSubmit}>Submit</button>
       </div>
     );
   }

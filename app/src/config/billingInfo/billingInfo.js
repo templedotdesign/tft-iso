@@ -10,7 +10,7 @@ export default {
     touched: false,
     value: 'USA',
     validation: {
-      required: true
+      required: false
     },
     valid: false
   },
@@ -26,21 +26,6 @@ export default {
     value: '',
     validation: {
       required: true
-    },
-    valid: false
-  },
-  billingAddress2: {
-    attributes: {
-      type: 'text',
-      placeholder: ''
-    },
-    elementType: 'input',
-    label: 'Suite / Apt. #:',
-    options: [],
-    touched: false,
-    value: '',
-    validation: {
-      required: false
     },
     valid: false
   },

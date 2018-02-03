@@ -16,7 +16,7 @@ export default {
   },
   questions: {
     attributes: {
-      cols: '40',
+      cols: '30',
       rows: '10'
     },
     elementType: 'textarea',

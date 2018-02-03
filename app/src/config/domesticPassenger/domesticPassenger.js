@@ -58,13 +58,35 @@ export default {
     },
     valid: false
   },
-  dob: {
-    attributes: {
-      type: 'date'
+  birthMonth: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Birth Month:',
+    options: Constants.MONTHS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
     },
-    elementType: 'input',
-    label: 'Date Of Birth:',
-    options: [],
+    valid: false
+  },
+  birthDay: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Birth Day:',
+    options: Constants.DAYS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  birthYear: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Birth Year:',
+    options: Constants.YEARS(),
     touched: false,
     value: '',
     validation: {

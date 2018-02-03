@@ -4,7 +4,7 @@ export default {
   tripType: {
     attributes: {},
     elementType: 'select',
-    label: 'Lodging or Cruise?',
+    label: 'Accommodations:',
     options: Constants.LODGING_CRUISE,
     touched: false,
     value: '',

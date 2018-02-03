@@ -1,11 +1,11 @@
 export const TRAVEL_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Domestic', name: 'Domestic' },
   { value: 'International', name: 'International' }
 ];
 
 export const PASSENGER_COUNT = [
-  { value: 0, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 1, name: '1' },
   { value: 2, name: '2' },
   { value: 3, name: '3' },
@@ -19,7 +19,7 @@ export const PASSENGER_COUNT = [
 ];
 
 export const SUFFIXES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'SR', name: 'SR.' },
   { value: 'JR', name: 'JR.' },
   { value: 'I', name: 'I' },
@@ -29,20 +29,20 @@ export const SUFFIXES = [
 ];
 
 export const GENDER_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'M', name: 'Male' },
   { value: 'F', name: 'Female' }
 ];
 
 export const BEDDING_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'King', name: 'King Bed(s)' },
   { value: 'Queen', name: 'Queen Bed(s)' },
   { value: 'Double', name: 'Double Bed(s)' }
 ];
 
 export const VACATION_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Adult Vacation', name: 'Adult Vacation' },
   { value: 'Agency Group', name: 'Agency Group' },
   { value: 'Amish Trip', name: 'Amish Trip' },
@@ -68,27 +68,27 @@ export const VACATION_TYPES = [
 ];
 
 export const YES_NO = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Yes', name: 'Yes' },
   { value: 'No', name: 'No' }
 ];
 
 export const YES_NO_INSURANCE = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Yes', name: 'Yes' },
   { value: 'No', name: 'No' },
   { value: 'Undecided', name: 'Undecided. Contact Me.'}
 ];
 
 export const YES_NO_AIRFARE = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Yes', name: 'Yes' },
   { value: 'No', name: 'No' },
   { value: 'Flights Already Purchased', name: 'Flights Already Purchased' }
 ];
 
 export const PAYMENT_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'AMEX', name: 'American Express' },
   { value: 'DISCOVER', name: 'Discover' },
   { value: 'MC', name: 'Mastercard' },
@@ -96,20 +96,21 @@ export const PAYMENT_TYPES = [
 ];
 
 export const PAYMENT_AMOUNTS = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Full', name: 'Full' },
   { value: 'Deposit', name: 'Deposit Only' },
   { value: 'Other', name: 'Other' }
 ];
 
 export const LODGING_CRUISE = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Cruise', name: 'Cruise' },
-  { value: 'Lodging', name: 'Lodging' }
+  { value: 'Lodging', name: 'Resort/Hotel' },
+  { value: 'Airfare', name: 'Airfare Only'}
 ];
 
 export const ROOM_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Standard', name: 'Standard' },
   { value: 'Resortview', name: 'Resort View' },
   { value: 'Oceanview', name: 'Ocean View' },
@@ -120,7 +121,7 @@ export const ROOM_TYPES = [
 ];
 
 export const CABIN_TYPES = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: 'Inside', name: 'Inside' },
   { value: 'Oceanview', name: 'Ocean View' },
   { value: 'Balcony', name: 'Balcony' },
@@ -128,7 +129,7 @@ export const CABIN_TYPES = [
 ];
 
 export const MONTHS = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: '01', name: '01' },
   { value: '02', name: '02' },
   { value: '03', name: '03' },
@@ -144,7 +145,7 @@ export const MONTHS = [
 ];
 
 export const DAYS = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: '01', name: '01' },
   { value: '02', name: '02' },
   { value: '03', name: '03' },
@@ -180,7 +181,7 @@ export const DAYS = [
 
 export const YEARS = () => {
   let years = [
-    { value: null, name: 'Select' }
+    { value: '', name: 'Select' }
   ];
   for(let i = 2018; i >= 1918; i--) {
     years.push({value: i.toString(), name: i.toString()})
@@ -189,7 +190,7 @@ export const YEARS = () => {
 };
 
 export const EXP_YEARS = [
-  { value: null, name: 'Select' },
+  { value: '', name: 'Select' },
   { value: '18', name: '2018' },
   { value: '19', name: '2019' },
   { value: '20', name: '2020' },
@@ -202,7 +203,13 @@ export const EXP_YEARS = [
   { value: '27', name: '2027' },
   { value: '28', name: '2028' },
   { value: '29', name: '2029' },
-  { value: '30', name: '2030' },
+  { value: '30', name: '2030' }
+];
+
+export const CELL_HOME = [
+  { value: '', name: 'Select' },
+  { value: 'cell', name: 'Cell' },
+  { value: 'home', name: 'Home' }
 ];
 
 export const API_KEY = '...';

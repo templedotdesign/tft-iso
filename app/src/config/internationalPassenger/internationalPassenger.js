@@ -58,6 +58,54 @@ export default {
     },
     valid: false
   },
+  birthMonth: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Birth Month:',
+    options: Constants.MONTHS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  birthDay: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Birth Day:',
+    options: Constants.DAYS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  birthYear: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Birth Year:',
+    options: Constants.YEARS(),
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  gender: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Gender:',
+    options: Constants.GENDER_TYPES,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
   passportNum: {
     attributes: {
       type: 'text',
@@ -88,13 +136,11 @@ export default {
     },
     valid: false
   },
-  passportExpiration: {
-    attributes: {
-      type: 'date'
-    },
-    elementType: 'input',
-    label: 'Passport Expiration:',
-    options: [],
+  expMonth: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Passport Expiration Month:',
+    options: Constants.MONTHS,
     touched: false,
     value: '',
     validation: {
@@ -102,30 +148,28 @@ export default {
     },
     valid: false
   },
-  dob: {
-    attributes: {
-      type: 'date'
-    },
-    elementType: 'input',
-    label: 'Date Of Birth:',
-    options: [],
+  expDay: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Passport Expiration Day:',
+    options: Constants.DAYS,
     touched: false,
     value: '',
     validation: {
-      required: true
+      required: false
     },
     valid: false
   },
-  gender: {
+  expYear: {
     attributes: {},
     elementType: 'select',
-    label: 'Gender:',
-    options: Constants.GENDER_TYPES,
+    label: 'Passport Expiration Year:',
+    options: Constants.EXP_YEARS,
     touched: false,
     value: '',
     validation: {
-      required: true
+      required: false
     },
     valid: false
-  }
+  },
 }

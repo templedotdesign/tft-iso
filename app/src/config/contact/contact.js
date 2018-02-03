@@ -1,3 +1,5 @@
+import * as Constants from '../../constants/reservationForm/reservationForm';
+
 export default {
   country: {
     attributes: {
@@ -112,12 +114,12 @@ export default {
       placeholder: ''
     },
     elementType: 'input',
-    label: 'Home Phone:',
+    label: 'Phone 1:',
     options: [],
     touched: false,
     value: '',
     validation: {
-      required: false
+      required: true
     },
     valid: false
   },
@@ -127,12 +129,24 @@ export default {
       placeholder: ''
     },
     elementType: 'input',
-    label: 'Cell Phone:',
+    label: 'Phone 2:',
     options: [],
     touched: false,
     value: '',
     validation: {
       required: false
+    },
+    valid: false
+  },
+  phoneType: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Primary Phone Is:',
+    options: Constants.CELL_HOME,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
     },
     valid: false
   }

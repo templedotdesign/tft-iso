@@ -1,13 +1,11 @@
 import * as Constants from '../../constants/reservationForm/reservationForm';
 
 export default {
-  departureDate: {
-    attributes: {
-      type: 'date'
-    },
-    elementType: 'input',
-    label: 'Departure Date:',
-    options: [],
+  departureMonth: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Departure Month:',
+    options: Constants.MONTHS,
     touched: false,
     value: '',
     validation: {
@@ -15,13 +13,59 @@ export default {
     },
     valid: false
   },
-  returnDate: {
-    attributes: {
-      type: 'date'
+  departureDay: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Departure Day:',
+    options: Constants.DAYS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
     },
-    elementType: 'input',
-    label: 'Return Date:',
-    options: [],
+    valid: false
+  },
+  departureYear: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Departure Year:',
+    options: Constants.EXP_YEARS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  returnMonth: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Return Month:',
+    options: Constants.MONTHS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  returnDay: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Return Day:',
+    options: Constants.DAYS,
+    touched: false,
+    value: '',
+    validation: {
+      required: true
+    },
+    valid: false
+  },
+  returnYear: {
+    attributes: {},
+    elementType: 'select',
+    label: 'Return Year:',
+    options: Constants.EXP_YEARS,
     touched: false,
     value: '',
     validation: {
@@ -76,18 +120,6 @@ export default {
     elementType: 'select',
     label: 'Vacation Type:',
     options: Constants.VACATION_TYPES,
-    touched: false,
-    value: '',
-    validation: {
-      required: false
-    },
-    valid: false
-  },
-  airfare: {
-    attributes: {},
-    elementType: 'select',
-    label: 'Do You Need Airfare?',
-    options: Constants.YES_NO_AIRFARE,
     touched: false,
     value: '',
     validation: {
