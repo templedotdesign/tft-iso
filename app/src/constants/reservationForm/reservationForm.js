@@ -67,6 +67,39 @@ export const VACATION_TYPES = [
   { value: 'Vow Renewal', name: 'Vow Renewal' },
 ];
 
+export const ENCODED_VACATION_TYPES = [
+  { value: '', name: 'Select' },
+  { value: 'FRP', name: 'Featured Trips - Rose Parade' },
+  { value: 'FH', name: 'Featured Trips - Hawaii' },
+  { value: 'FED', name: 'Featured Trips - El Dorado' },
+  { value: 'FO', name: 'Featured Trips - Oberammergau' },
+  { value: 'GP', name: 'Group Trips - Paris' },
+  { value: 'GN', name: 'Group Trips - Nashville' },
+  { value: 'GB', name: 'Group Trips - Beach Palace' },
+  { value: 'AV', name: 'Adult Vacation' },
+  { value: 'AG', name: 'Agency Group' },
+  { value: 'AM', name: 'Amish Trip' },
+  { value: 'AN', name: 'Anniversary' },
+  { value: 'BCHP', name: 'Bachelor Party' },
+  { value: 'BCHPT', name: 'Bachelorette Party' },
+  { value: 'BUS', name: 'Bus Transportation' },
+  { value: 'BIZTRAV', name: 'Business Travel' },
+  { value: 'CHRCH', name: 'Church Group' },
+  { value: 'CG', name: 'Corporate Group' },
+  { value: 'CO', name: 'Corporate Incentive' },
+  { value: 'DW', name: 'Destination Wedding' },
+  { value: 'DWG', name: 'Destination Wedding Guest' },
+  { value: 'FR', name: 'Family Reunion' },
+  { value: 'FV', name: 'Family Vacation' },
+  { value: 'FFT', name: 'Friends And Family Trip' },
+  { value: 'GIFT', name: 'Gift Certificate' },
+  { value: 'HM', name: 'Honeymoon' },
+  { value: 'QUOTED', name: 'Insurance Quoted' },
+  { value: 'RG', name: 'Romantic Getaway' },
+  { value: 'SCH', name: 'School Trip' },
+  { value: 'VOW', name: 'Vow Renewal' },
+];
+
 export const YES_NO = [
   { value: '', name: 'Select' },
   { value: 'Yes', name: 'Yes' },
@@ -212,7 +245,39 @@ export const CELL_HOME = [
   { value: 'home', name: 'Home' }
 ];
 
-export const API_KEY = '...';
+export const PAYMENT = [
+  { value: '', name: 'Select' },
+  { value: 'deposit', name: 'Deposit' },
+  { value: 'other or final payment', name: 'Other OR Final Payment' },
+  { value: 'honeymoon registry gift', name: 'Honeymoon Registry Gift'}
+]
+
+export const TRAFFIC_SOURCES = [
+  { value: '', name: 'Select' },
+  { value: 'agents friends and family', name: 'Agents Friends & Family' },
+  { value: 'bridal shows', name: 'Bridal Shows' },
+  { value: 'facebook', name: 'Facebook' },
+  { value: 'family', name: 'Family' },
+  { value: 'friends', name: 'Friends' },
+  { value: 'google', name: 'Google' },
+  { value: 'internet', name: 'Internet' },
+  { value: 'other', name: 'Other' },
+  { value: 'past client', name: 'Past Client' },
+  { value: 'past client referral', name: 'Past Client Referral' },
+  { value: 'repeat client', name: 'Repeat Client' },
+  { value: 'trip advisor', name: 'Trip Advisor' },
+  { value: 'wedding guest', name: 'Wedding Guest' },
+  { value: 'word of mouth', name: 'Word Of Mouth' },
+]
+
+export const RESORT_TYPES = [
+  { value: '', name: 'Select' },
+  { value: 'adults only', name: 'Adults Only' },
+  { value: 'all-inclusive', name: 'All-Inclusive' },
+  { value: 'family friendly', name: 'Family Friendly' },
+]
+
+export const API_KEY = '9A9535E5-B636-4C3B-BAA7-56C87E2FD076';
 
 export const TERMS_ONE = `By submitting this form, you certify that you are the cardholder and are authorizing 
 the travel agency or its chosen Tour Operator/Supplier/Cruise Line to charge the listed amount to the credit 

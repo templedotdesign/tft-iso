@@ -13,6 +13,7 @@ import moneyImage from '../../assets/money.png';
 import passportImage from '../../assets/passport.png';
 import surveyImage from '../../assets/survey.png';
 import ticketsImage from '../../assets/tickets.png';
+import quoteImg from '../../assets/quoteImg.jpg';
 
 class Forms extends Component {
   componentDidMount() {
@@ -24,6 +25,7 @@ class Forms extends Component {
       <Wrapper>
         <Banner heading='Forms' src={deskImage} alignment='center'/>
         <Row justification='space-around' alignment='center'>
+          <ImageBox src={quoteImg} buttonTitle='Request A Quote' to='/forms/quote'/>
           <ImageBox src={ticketsImage} buttonTitle='Reservation Form' to='/forms/reservation'/>
           <ImageBox src={moneyImage} buttonTitle='Payment Form' to='/forms/payment'/>
         </Row>

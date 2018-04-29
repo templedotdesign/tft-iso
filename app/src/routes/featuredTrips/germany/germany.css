@@ -1,0 +1,19 @@
+.germany {
+  width: 80%;
+  margin: 30px auto;
+  font-size: 1.5rem;
+}
+
+.germany img {
+  width: 60%;
+}
+
+.germany span {
+  font-weight: bold;
+}
+
+@media(max-width:750px) {
+  .germany img {
+    width: 85%;
+  }
+}

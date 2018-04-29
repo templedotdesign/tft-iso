@@ -25,7 +25,7 @@ class GroupTravel extends Component {
         <Row justification='space-around' alignment='center'>
           <ImageBox src={parisImage} buttonTitle='Paris 2018' to='/group-travel/paris'/>
           <ImageBox src={nashvilleImage} buttonTitle='Nashville 2018' to='/group-travel/nashville'/>
-          <ImageBox src={cancunImage} buttonTitle='Beach Palace Cancun 2019' to='/group-travel/cancun'/>
+          <ImageBox src={cancunImage} buttonTitle='Beach Palace Cancun 2019' to='/group-travel/cancun'/>          
         </Row>
       </Wrapper>
     );

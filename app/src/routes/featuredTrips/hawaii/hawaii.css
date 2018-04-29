@@ -1,0 +1,19 @@
+.hawaii {
+  width: 80%;
+  margin: 30px auto;
+  font-size: 1.5rem;
+}
+
+.hawaii img {
+  width: 60%;
+}
+
+.hawaii span {
+  font-weight: bold;
+}
+
+@media(max-width:750px) {
+  .hawaii img {
+    width: 85%;
+  }
+}

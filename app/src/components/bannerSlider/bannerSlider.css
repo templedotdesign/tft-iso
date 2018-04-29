@@ -1,0 +1,13 @@
+.slider {
+  width: 100vw;
+  min-height: 75vh;
+  margin-top: 75px;
+  display: flex;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  padding-bottom: 75px;
+}
+
+.visible {
+  opacity: 1;
+}

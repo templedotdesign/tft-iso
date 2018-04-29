@@ -153,7 +153,8 @@ export const robert = {
       'Vegas Certified Travel Professional',
       'IATAN – International Association of Travel Agents Network',
       'Marriott Excellence Graduate',
-      'In January, 2017, completed Sandals Weddingmoon training @ Sandals Royal Bahamian'
+      'In January, 2017, completed Sandals Weddingmoon training @ Sandals Royal Bahamian',
+      'Universal Studios Travel Agent Certification'
     ]
   },
   tab3: {
@@ -384,7 +385,8 @@ export const tammy = {
     title: 'Certifications',
     content: [
       'Disney College of Knowledge Graduate',
-      'Jamaica Travel Specialist'
+      'Jamaica Travel Specialist',
+      'Key Lime Academy Graduate'
     ]
   },
   tab3: {
@@ -428,7 +430,8 @@ export const juli = {
       'Puerto Rico Travel Expert',
       'Nassau Paradise Island Specialist',
       'St. Maarten Specialist',
-      'RIU Hotels and Resort Specialist'
+      'RIU Hotels and Resort Specialist',
+      'Universal Studios Travel Agent Certification'
     ]
   },
   tab3: {
@@ -470,7 +473,9 @@ export const diane = {
       'Marriott Excellence Graduate',
       'Hyatt Specialist',
       'Universal Resorts Specialist',
-      'Disney College of Knowledge'
+      'Disney College of Knowledge',
+      'Universal Studios Travel Agent Certification',
+      'Jamaica Travel Specialist'
     ]
   },
   tab3: {
@@ -536,6 +541,121 @@ export const marcy = {
       'Washington DC',
       'New Mexico: Albuquerque, Santa Fe, Cimeron, Los Alamos, Bandalere and Tent Rock Canyons National Parks',
       'Las Vegas and Grand Canyon'
+    ]
+  }
+}
+
+export const dena = {
+  tab1: {
+    title: 'Bio',
+    content: [
+      `We are the Bentz's....Dena and John, and we always helped friends with travel plans,
+      especially Disneyworld vacations. They would always say we should be travel agents.
+      Thanks to Steph and Bob we get to help others plan their special vacations.`,
+      `As always we have to say a special thank you for our daughter Katie, whom
+      introduced us to Steph and Bob when they booked Katie's law school trip to England.
+      When Katie met Steph she knew we needed to meet right away, especially because she
+      saw all the amazing Disneyworld items in her office.`,
+      `By day I work at an appraisal company and John is a nurse. When we met almost 18
+      years ago we started a small woodworking business, and we have always found we
+      work well together no matter where our journey takes us. We have traveled many
+      places in the US and abroad. Helping others make their dream vacations come true is
+      not a job for us it is a passion.`
+    ]
+  },
+  tab2: {
+    title: 'Certifications',
+    content: [
+      "Jamaica Specialist",
+      "Certified Sandals Specialist",
+      "Disney College Of Knowledge Graduate",
+      "Advanced Disney College Of Knowledge Graduate"
+    ]
+  },
+  tab3: {
+    title: 'Destinations Visited',
+    content: [
+      `Disneyworld / Universal Studios`,
+      `Florida: Orlando / St. Cloud, Vero Beach, Boca Raton, Fort Lauderdale, Gulf Coast,
+      and Clearwater`,
+      "New York City, NY",      
+      "Raleigh, NC",
+      "Pittsburgh, PA",
+      "Charleston, WV",
+      "Washington, DC / Arlington, VA",
+      "Grand Canyon",
+      "Arizona",
+      "Colorado",
+      "Niagra Falls, US & Canada",
+      "Toronto, Canada",
+      "Paris, France",
+      "Madrid, Spain"
+      
+    ]
+  },
+  tab4: {
+    title: 'Testimonals',
+    content: [
+      "We have used Dena and John Bentz travel many times and have received nothing but excellent service. Dena is a one on one agent. She is very detailed oriented and makes sure she understands exactly what kind of vacation we are looking for. She has booked us four vacations in the past couple years. They take care of all the leg work and all we had to do was enjoy our trip. I would recommend them to anyone.  Thank you Dena and John for always going above and beyond.",
+      `I just wanted to write an email about how wonderful you two were as travel agents! Seriously. From the start, you listened to what Michael and I were thinking in what we wanted for our honeymoon. You researched our options. You made sure you kept our desires in the forefront on your research and you also kept in mind our budget. You followed up with us to make sure we had everything. You dealt with all of the paperwork and followed up with everything. You were on top of our honeymoon planning more than what we were (which is a really good thing).`
+    ]
+  }
+}
+
+export const michele = {
+  tab1: {
+    title: 'Bio',
+    content: [
+      `I have combined my entrepreneurial spirit, along with my extensive travels, to become a
+      passionate independent agent at Tons of Fun Travel since March 2012. I have loved to
+      travel since I was a teenager, and I love to create dream vacations, honeymoons, and
+      special occasions for my clients.`,
+      `I presently am enhancing my knowledge of cultures through visiting unique islands and
+      countries, all the while developing itineraries and expanding my knowledge of travel
+      regulations to better serve my clients. Whenever I have the opportunity, I often attend
+      travel seminars and courses around the United States and abroad.`,
+      `I have been married to the love of my life for 33 years and we have raised 3 adult
+      children and have one granddaughter. My husband, Todd Inskeep, has been employed
+      at Honda of America for over 34 years, yet finds the time to assist me with my travel
+      business. When not traveling, I love spending time with my family, reading personal
+      development books and travel magazines, and being involved with her community.`
+    ]
+  },
+  tab2: {
+    title: 'Certifications',
+    content: [
+      "Jamaica Specialist",
+      "Certified Sandals Specialist",
+      "Disney College Of Knowledge Graduate",
+      "Certified Palace Pro Agent",
+      "Master Agent of AM Resorts",
+      "Jewels Resort",
+      "Palace Pro Weddings"
+    ]
+  },
+  tab3: {
+    title: 'Destinations Visited',
+    content: [
+      `Theme Parks:  Disneyworld, Disneyland, Sea World, Dollywood, Knotts Berry Farm`,
+      `Georgia: Tybee Island, Savannah, Atlanta`,
+      `South Carolina: Myrtle Beach, & Charleston`,
+      `Tennessee:  Pigeon Forge, Gatlinburg &  Nashville`,
+      `Illinois:  Chicago`,
+      `Florida:  Destin, Clearwater, Sarasota, Fort Lauderdale, Miami, Key West, Bradenton, and Jacksonville`,
+      `Washington, DC`,
+      `Colorado:  Denver & Indian Hills`,
+      `California:  Anaheim,  Los Angeles, San Francisco, Yuba City, Redwoods`,
+      `Las Vegas, NV`,
+      `Massachusetts:  Boston & Cape Cod`,
+      `Minnesota:  Minneapolis`,
+      `Maryland`,
+      `Wisconsin`,
+      `Cayman Islands`,
+      `Great Exuma`,
+      `Turks & Caicos`,
+      `Bahamas: Nassau, Freeport`,
+      `Jamaica: Negril, Ocho Rios, Montego Bay`,
+      `Mexico: Cancun, Riviera Maya, Akumal, Playa Mujeres, Playa Del Carmen`
     ]
   }
 }

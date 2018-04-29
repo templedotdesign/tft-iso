@@ -20,7 +20,7 @@ class ImageBox extends Component {
         button = <a href={this.props.to} target='_blank' rel='noopener noreferrer'>{this.props.buttonTitle}</a>
       } else {
         alt = this.props.buttonTitle
-        button = <a onClick={(event) => this.onClick(event, this.props.to)}>{this.props.buttonTitle}</a>
+        button = <a onClick={(event) => this.onClick(event, this.props.to)} style={{textAlign: 'center'}}>{this.props.buttonTitle}<br/>{this.props.buttonTitle2}</a>
       }
     } else {
       alt = this.props.alt

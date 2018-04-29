@@ -7,6 +7,7 @@ import axios from 'axios';
 import Field from '../field/field';
 import FieldGroup from '../fieldGroup/fieldGroup';
 import Notification from '../notification/notification';
+import Loader from '../../loader/loader';
 
 //CSS
 import classes from './reservationForm.css';
@@ -52,7 +53,8 @@ class ReservationForm extends Component {
     },
     uploadSuccess: false,
     uploadFailure: false,
-    invalidFields: []
+    invalidFields: [],
+    loading: false
   }
 
   componentDidMount() {
@@ -381,6 +383,7 @@ class ReservationForm extends Component {
     this.setState({...this.state, invalidFields: invalidFields});
       
     if(invalidFields.length === 0) {
+      this.setState({...this.state, loading: true, invalidFields: invalidFields})
       let resortConfig = null;
       if(this.state.formConfig.tripTypeConfig.tripType.value === 'Lodging' || this.state.formConfig.tripTypeConfig.tripType.value === 'Airfare') {
         resortConfig = 'resortConfig';
@@ -445,7 +448,7 @@ class ReservationForm extends Component {
       .then(res => {
         console.log(res.data);
         console.log('Upload Successful');
-        this.setState({...this.state, uploadSuccess: true});
+        this.setState({...this.state, uploadSuccess: true, loading: false});
         setTimeout(() => {
           this.props.history.push('/');
         }, 2000);
@@ -459,7 +462,7 @@ class ReservationForm extends Component {
         .catch(err => {
           console.log(err)
         })
-        this.setState({...this.state, uploadFailure: true});
+        this.setState({...this.state, uploadFailure: true, loading: false});
       });
     }
   };
@@ -668,6 +671,11 @@ class ReservationForm extends Component {
         </div>
       );
     }
+
+    let loader = null;
+    if(this.state.loading === true) {
+      loader = <Loader/>
+    }
     
     return (
       <div className={classes.reservationForm}>
@@ -833,6 +841,7 @@ class ReservationForm extends Component {
         <p style={{margin: '10px', fontSize: '1rem'}}>{TERMS_FIVE}</p>
 
         <hr/>
+        {loader}
         {notification}
         {invalidNotification}
         <button onClick={this.handleSubmit}>Submit</button>

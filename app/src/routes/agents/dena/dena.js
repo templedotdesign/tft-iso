@@ -10,22 +10,22 @@ import Heading from '../../../components/layout/heading/heading';
 import Wrapper from '../../../components/layout/wrapper/wrapper';
 
 //Assets
-import lauraImage from '../../../assets/laura.png';
+import denaImage from '../../../assets/dena.jpg';
 
-class Laura extends Component {
+class Dena extends Component {
   componentDidMount() {
     window.scroll(0,0);
   }
   render() {
     const buttons = [
-      {buttonTitle: 'Contact Me', to:'mailto:travelagentlaurab@gmail.com'}
+      {buttonTitle: 'Contact Me', to:'mailto:travelagentdena@gmail.com'}
     ]
     return (
       <Wrapper>
-        <Heading heading="Hi!  We're Laura & Mike!"/>
+        <Heading heading="Hi!  We're Dena & John!"/>
         <Column justification='space-around' alignment='center'>
-          <Avatar src={lauraImage} alt='laura'/>
-          <AgentInfo currentAgent='laura' resizeable width="95%"/>
+          <Avatar src={denaImage} alt='dena'/>
+          <AgentInfo currentAgent='dena' resizeable width="95%"/>
           <CallToAction title="Get In Touch" buttons={buttons} width='80%' vertical email/>
         </Column>
       </Wrapper>
@@ -33,4 +33,4 @@ class Laura extends Component {
   }
 }
 
-export default Laura;
+export default Dena;

@@ -1,0 +1,19 @@
+.rose {
+  width: 80%;
+  margin: 30px auto;
+  font-size: 1.5rem;
+}
+
+.rose img {
+  width: 60%;
+}
+
+.rose span {
+  font-weight: bold;
+}
+
+@media(max-width:750px) {
+  .rose img {
+    width: 85%;
+  }
+}

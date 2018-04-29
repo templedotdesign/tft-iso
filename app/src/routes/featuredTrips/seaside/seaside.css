@@ -1,0 +1,24 @@
+.seaside {
+  width: 80%;
+  margin: 30px auto;
+  font-size: 1.5rem;
+}
+
+.seaside img {
+  width: 60%;
+}
+
+.tableTitle {
+  background-color: #2376ec;
+  color: white;
+}
+
+@media(max-width:750px) {
+  .seaside {
+    width: 100%;
+  }
+  
+  .seaside img {
+    width: 85%;
+  }
+}
