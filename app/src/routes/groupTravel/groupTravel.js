@@ -6,6 +6,7 @@ import Banner from '../../components/layout/banner/banner';
 import ImageBox from '../../components/imageBox/imageBox';
 import Row from '../../components/layout/row/row';
 import Wrapper from '../../components/layout/wrapper/wrapper';
+import CallToAction from '../../components/callToAction/callToAction';
 
 //Assets
 import cancunImage from '../../assets/cancun.png';
@@ -27,6 +28,9 @@ class GroupTravel extends Component {
           <ImageBox src={nashvilleImage} buttonTitle='Nashville 2018' to='/group-travel/nashville'/>
           <ImageBox src={cancunImage} buttonTitle='Beach Palace Cancun 2019' to='/group-travel/cancun'/>          
         </Row>
+        <div style={{ backgroundColor: 'white',  padding: '30px 10%'}}>
+          <CallToAction title='Ridgemont High School Washington, DC Trip 2019' buttons={[{buttonTitle: 'Click Here', to: 'https://www.adventurestudenttravel.com'}]} vertical exterior/>
+        </div>   
       </Wrapper>
     );
   }

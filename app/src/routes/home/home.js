@@ -86,7 +86,11 @@ class Home extends Component {
           </Row>
         </div>
         <QuoteWindow quote="We travel not to escape life, but for life not to escape us." author='Anonymous'/>
-        <Background src={backgroundImage} alt="mountain pier"/>        
+        <div style={{ backgroundColor: 'white',  padding: '30px 10%'}}>
+          <CallToAction title='Ridgemont High School Washington, DC Trip 2019' buttons={[{buttonTitle: 'Click Here', to: 'https://www.adventurestudenttravel.com'}]} vertical exterior/>
+        </div>   
+        <Background src={backgroundImage} alt="mountain pier"/>
+             
       </Wrapper>
     );
   }
