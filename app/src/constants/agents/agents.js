@@ -212,7 +212,7 @@ export const laura = {
   tab1: {
     title: 'Bio',
     content: [
-      'Hi, I’m Laura & my husband Mike is my business partner.',
+      'Hi, I’m Laura & my husband Mike is my business partner and we are the owners of Grand Memories Travel Agency.',
       "Our interest in travel began in 1992 when we independently planned our first group event and then continued to plan many yearly events with as many as 52 people joining us. In March of 2015 I decided to take my travel hobby to a professional level and joined Tons of Fun Travel as an Independent Agent.  As my career started to develop my husband Mike became my assistant, he joined our agency in February of 2017 making us a team.",
       'In addition to Tons of Fun Travel I am the Fiscal Officer for the Village of Lafayette. My passion outside of travel is being a volunteer Fire Fighter/EMT with the Lafayette-Jackson Township Fire Department.  Mike works for a local trucking company and loves to farm when time allows.',
       'Mike and I have been married for over 32 years so working as a team is what comes natural for us. We are so glad you have taken the time to get to know us by stopping by our webpage and we hope to be able to work with you on your dream vacation.'
@@ -231,8 +231,10 @@ export const laura = {
     title: 'Destinations',
     content: [
       'Bahamas',
-      'Jamaica: Montego Bay, Ocho Rios',
-      'Mexico: Tijuana',
+      'Aruba',
+      'Jamaica: Montego Bay, Ocho Rios, Negril',
+      'Mexico: Tijuana, Cancun',
+      'Honduras: Roatan',
       'Alaska: Skagway, Ketchikan, Juneau, Anchorage, Whittier, Talkeetna, Denali, McKinley',
       'Vancouver, BC',
       'South Carolina: Pawley’s Island, Myrtle Beach',
